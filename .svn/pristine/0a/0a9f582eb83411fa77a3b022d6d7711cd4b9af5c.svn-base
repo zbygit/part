@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my/sign.css" />
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">已报名兼职</div>
+		</header>
+		<ul id="signUpList"></ul>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function() {
+				window.open("my.html", "_self");
+			})
+
+			var jsonData = Fun.getJson("signup.json");
+			var html = "";
+			for(var i = 0; i < jsonData.length; i++) {
+				html += '<li class="signUpItem"><img src="' + jsonData[i].itemIcon + '"class="itemIcon"/>' +
+					'<div class="signUpinfo"><div class="signUpName">' + jsonData[i].signUpName + 
+					'</div><div class="time">报名时间 : <span class="date_day">' + jsonData[i].date_day +
+					'</span>&nbsp;<span class="date_time">' + jsonData[i].date_time + '</span></div>' +
+					'</div><div class="isSignUp" isHave="' + jsonData[i].isHave + '"></div></li>';
+			}
+
+			$("#signUpList").append(html);
+			$.each($(".isSignUp"), function(index, item) {
+				console.log(index);
+
+				if($($(".isSignUp")[index]).attr("isHave") == 1) {
+					$($(".isSignUp")[index]).html("投递成功");
+				} else {
+					$($(".isSignUp")[index]).html("已下架");
+					$($(".isSignUp")[index]).addClass("down");
+				}
+			})
+		</script>
+	</body>
+
+</html>

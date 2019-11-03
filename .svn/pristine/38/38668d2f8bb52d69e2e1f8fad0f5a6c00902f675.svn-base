@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Title</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			/*上标题*/
+			
+			.header1 {
+				width: 100%;
+				height: 4rem;
+			}
+			
+			.header {
+				width: 100%;
+				height: 4rem;
+				line-height: 4rem;
+				text-align: center;
+				background: #36D9D6;
+				font-size: 2.5rem;
+				color: #ffffff;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				position: fixed;
+			}
+			
+			.header>span {
+				height: 100%;
+				width: 3rem;
+				position: absolute;
+				left: 1rem;
+				background: url("../../image/zuo.png") no-repeat center;
+				background-size: 60% 70%;
+				display: inline-block;
+			}
+			
+			.aside {
+				width: 100%;
+				height: 16rem;
+				background-size: 100% auto;
+			}
+			
+			.h1 {
+				text-indent: 1rem;
+				font-size: 2rem;
+				margin-top: 1rem;
+			}
+			
+			.aside1>li {
+				display: inline-block;
+				text-indent: 2rem;
+				height: 2rem;
+				font-size: 1rem;
+				line-height: 2rem;
+				color: #666666;
+			}
+			
+			.icon {
+				height: 60%;
+				position: relative;
+				top: .2rem;
+				margin-right: .3rem;
+			}
+			
+			.text {
+				margin-top: 1rem;
+			}
+			
+			.text>li {
+				list-style-position: inside;
+				font-size: 1.6rem;
+				text-indent: 2rem;
+				margin-bottom: .51rem;
+				font-weight: bold;
+			}
+			
+			.text>li>div {
+				font-size: 1rem;
+				padding-left: 1rem;
+				font-weight: normal;
+				text-indent: 1rem;
+			}
+			/*分享收藏*/
+			
+			.share {
+				padding-top: .5rem;
+				width: 100%;
+				height: 4.5rem;
+				position: fixed;
+				bottom: 0;
+				z-index: 2;
+				background: #FFFFFF;
+			}
+			
+			.share>#share1 {
+				display: inline-block;
+				width: 75%;
+				height: 80%;
+				background: #36D9D6;
+				position: absolute;
+				line-height: 4rem;
+				left: 1rem;
+				text-align: center;
+				text-decoration: none;
+				font-size: 2rem;
+				color: #ffffff;
+				border-radius: 0.5rem;
+			}
+			
+			.share>#share1>img {
+				height: 2rem;
+				vertical-align: middle;
+				padding-right: 0.5rem;
+			}
+			
+			.share>#share2 {
+				display: inline-block;
+				position: absolute;
+				right: 1rem;
+				height: 80%;
+				width: 16%;
+				width: 16%;
+					background: #36D9D6;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+			}
+			.share>#share2>img{
+				width: 50%;
+				height: auto;
+				vertical-align: middle;
+			}
+			/*<!--笼罩层-->*/
+			
+			.envelop {
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				bottom: 0%;
+				z-index: 5;
+				background: rgba(0, 0, 0, 0.5);
+				display: none;
+			}
+			
+			.envelop>img {
+				width: 100%;
+				position: fixed;
+				bottom: 0;
+			}
+			
+			.hint {
+				height: 1rem;
+				width: 100%;
+				text-align: center;
+				line-height: 1rem;
+				padding-top: 3rem;
+				padding-bottom: 5.5rem;
+				font-size: 1.5rem;
+				color: #595B5D;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<div class="header1">
+			<header class="header"><span class="key"></span>宝典</header>
+		</div>
+		<div id="contentBoxS"></div>
+
+		<script src="../../js/htmlFont.sizeRoot.js"></script>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			window.onload = function() {
+				var collectCookies = $.cookie("collect") == undefined ? [] : JSON.parse($.cookie("collect"));
+
+				var bodyH = document.body.clientHeight;
+				var jsonData = Fun.getJson("treasury.json")[parseInt(Fun.getUrl().itemIndex)];
+				var html = '<aside class="aside" style="' + jsonData.style + '"></aside><h1 class="h1">' + jsonData.bibleName + '</h1>' +
+					'<ul class="aside1"><li><img src="../../image/day.png" alt="" class="icon">' + jsonData.foundTime + '</li><li><img src="../../image/my.png" alt="" class="icon">' + jsonData.readNum + '</li></ul>' +
+					'<ul class="text">' + jsonData.content + '</ul>' +
+					'<div class="envelop"><img src="../../image/66.png" alt="" class="imgs1"></div><p class="hint">————已经到底了————</p>' +
+					'<div class="share">\n' +
+					'    <span id="share1"><img src="../../image/fx.png" alt="">分享</span>' +
+					'   <span  id="share2"> <img src="../../image/shoucang.png" alt=""class="collect"></span></div>';
+				$("#contentBoxS").html(html);
+				console.log(collectCookies);
+				var itemIndex = Fun.getUrl().itemIndex;
+				for(var i = 0; i < collectCookies.length; i++) {
+					if(collectCookies[i] == itemIndex) {
+						$(".collect").attr("src", "../../image/shoucang_my.png")
+					}
+				}
+
+				//收藏
+				$(".collect").click(function() {
+					collectCookies = $.cookie("collect") == undefined ? [] : JSON.parse($.cookie("collect"));
+
+					//判断cookie是否存在数据
+					if(collectCookies.length > 0) {
+
+						var isCollect = false;
+						for(var i = 0; i < collectCookies.length; i++) {
+							if(collectCookies[i] == itemIndex) {
+								isCollect=true;
+								collectCookies.splice(i, 1);
+								$.cookie("collect", JSON.stringify(collectCookies), {
+									expires: 7,path:"/"
+								});
+							$(".collect").attr("src", "../../image/shoucang.png");
+							}
+						}
+
+						if(!isCollect) {
+							collectCookies.push(itemIndex);
+							$.cookie("collect", JSON.stringify(collectCookies), {
+								expires: 7,path:"/"
+							});
+							$(this).attr("src", "../../image/shoucang_my.png");
+						}
+
+					} else {
+						collectCookies.push(itemIndex);
+						$.cookie("collect", JSON.stringify(collectCookies), {
+							expires: 7,path:"/"
+						});
+						$(this).attr("src", "../../image/shoucang_my.png");
+					}
+
+				})
+
+				var key = document.getElementsByClassName("key")[0];
+				var envelop = document.getElementsByClassName("envelop")[0];
+				var imgs1 = document.getElementsByClassName("imgs1")[0];
+				var share1 = document.getElementById("share1");
+
+				// 返回上一页
+				key.addEventListener("touchstart", function() {
+					key.style.background = "rgba(250,250,250,.2)";
+					setInterval(function() {
+						window.open("treasury.html", "_self");
+					}, 500)
+					// window.open("index.html", "_self");
+				});
+				share1.addEventListener("touchstart", function() {
+					envelop.style.display = "block";
+				}, false);
+
+				imgs1.addEventListener("touchstart", function(e) { //取消冒泡事件的影响。
+					e.stopPropagation();
+				});
+
+				envelop.addEventListener("touchstart", function() {
+					this.style.display = "none";
+				});
+			};
+		</script>
+	</body>
+
+</html>

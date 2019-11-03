@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/app/reg.css"/>
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">注册</div>
+		</header>
+		<div id="content">
+			<div id="appLogo">
+				<img src="../../image/logo.png" />
+				<p>兼职门，简直了</p>
+			</div>
+			<div id="contentInput">
+				<div class="input">
+					<input type="text" id="userName" index="0" value="" placeholder="请输入手机号" />
+				</div>
+				<div class="input">
+					<input type="password" id="password" index="1" value="" placeholder="请输入密码" />
+					<div class="look" click="0"></div>
+				</div>
+				<div class="input">
+					<input type="password" id="repassword" index="2" value="" placeholder="确认密码" />
+					<div class="look" click="0"></div>
+				</div>
+				<div class="input">
+					<div id="reg">注册</div>
+				</div>
+
+			</div>
+			<div id="bottomArea">
+				<div id="bottomTop">
+					<div id="bottomLine"></div>
+					<div id="title">第三方登录</div>
+				</div>
+				<div id="item">
+					<img src="../../image/QQ_03.png" />
+					<img src="../../image/weixin.png" id="wx" />
+					<img src="../../image/weibo.png" />
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/app/reg.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

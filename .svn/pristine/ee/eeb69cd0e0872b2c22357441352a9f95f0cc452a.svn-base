@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/msg/chat.css"/>
+	</head>
+
+	<body>
+		<header>
+			<div class="back"></div>
+			<div class="title"></div>
+			<div class="changeBtn"></div>
+		</header>
+		<div id="content">
+		
+		</div>
+		<div id="gifIcon"></div>
+		<!--底部导航区域-->
+		<div class="sendArea">
+			<div id="git"></div>
+			<div id="ico" class="send" form="friend"></div>
+			<textarea id="text"></textarea>
+			<div id="send"class="send"form="my">发送</div>
+		</div>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/msg/chat.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

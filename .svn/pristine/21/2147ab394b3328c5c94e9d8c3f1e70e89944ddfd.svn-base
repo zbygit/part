@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my/set.css" />
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">设置</div>
+
+		</header>
+		<ul id="otherDone">
+			<li class="pageChange" page="1">信息编辑<span class="pointer"></span></li>
+			<li class="pageChange" page="2">修改密码<span class="pointer"></span></li>
+			<!--<li class="pageChange" page="3">清除缓存<span class="pointer"></span></li>-->
+		</ul>
+
+		<div id="exit">退出登录</div>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function() {
+				window.open("my.html", "_self");
+			})
+			$(".pageChange").click(function(e) {
+				var index = $(this).attr("page");
+				switch(index) {
+					case "1":
+						window.open("../my/editor.html", "_self");
+						break;
+					case "2":
+						window.open("../my/changePws.html", "_self");
+						break;
+					default:
+						break;
+				}
+			})
+			$("#exit").click(function  () {
+				window.open("../app/login.html", "_self");
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/particulars.css">
+</head>
+<body>
+    <div id="warp">
+        <header>
+        <a href="javascript:;" class="fl back"><img src="../../image/zuo.png" alt=""></a>
+        <span>招聘生鲜水果蔬菜包装</span>
+        <span class="fr"><img src="../../image/shoucang.png" alt=""><img src="../../image/warning.png" alt=""></span>
+        </header>
+        <div id="exhibition">
+            <img src="../../image/SFSFSA_02.png" alt="">
+        </div>
+        <div id="salary">
+            <p class="top">
+                <img src="../../image/bai.png" alt="">
+                <span class="cover"></span>
+                <span class="right">浏览量: 1300</span>
+            </p>
+            <div class="center">
+                <p class="clearfix">
+                    <span class="fl"><img src="../../image/ASFASDFASDF_03.png" alt="">工作人员</span>
+                    <span class="fr"><img src="../../image/ASFASDFASDF_06.png" alt="">男女不限</span>
+                </p>
+                <p class="clearfix">
+                    <span class="fl"><img src="../../image/pos.png" alt=""><a></a></span>
+                    <span class="fr "><img src="../../image/ASFASDFASDF_15.png" alt="">2019-10-13</span>
+                </p>
+            </div>
+            <div class="bottom">
+               <span class="company-logo">
+                    <img src="../../image/ali.jpg" alt="">
+               </span>
+               <div class="company">
+                   <p>上海昊泰劳务有限公司</p>
+                   <p><span class="renz">认证商家</span> <span class="tuan">团队150-500人</span></p>
+               </div>
+            </div>
+        </div>
+        <div id="describe">
+            <p>
+                <img src="../../image/phone1.png" alt="">
+                <span>兼职描述</span>
+            </p>
+        </div>
+        <div id="message">
+            <p><span>上海招聘:</span>招聘天猫生鲜 (蔬菜水果) 包装工作人员30名，每天都要</p>
+            <p><span>工作要求:</span>18-50周岁, 男女不限, 冷藏库工作, 轻松酱油活, 带上身份证或者社保卡, 必须带一件厚外套, 禁止穿短裤, 凉鞋</p>
+            <p><span>工作内容:</span>打包, 分拣, 物流包装等</p>
+            <p><span>工资待遇:</span>白班12块每小时，夜班13块每小时，包工作餐，综合工资130-170，工资日结，下班结算</p>
+            <p><span>集合地址:</span>白班早上9点前 (夜班网上7点前) 到地铁3号线淞滨路1号口集合, 到了找我签到</p>
+            <p><span>报名:</span>姓名+电话+性别+生鲜包装 到13641982565 凝聚力阿星即可，微信同号</p>
+            <p class="hint">
+                温馨提示: 在线报名有利于商家实时查看您的简历, 极大提高录取概率哦！
+            </p>
+
+
+            
+        </div>
+        <div class="relation">
+            <p>
+                <img src="../../image/phone.png" alt="">
+                <span>联系商家</span>
+            </p>
+        </div>
+        <div class="relation-to">
+            <p>
+                <span>13691264582</span>
+            </p>
+            <p>
+                提示:凡收取费用的兼职需要谨慎
+            </p>
+        </div>
+        <div class="interest">
+            <p>
+                <img src="../../image/person.png" alt="">
+                <span>感兴趣的用户</span>
+            </p>
+        </div>
+        <div class="buddha">
+            <p>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                </span>
+                <span>
+                    ...
+                </span>
+            </p>
+        </div>
+        <div id="share">
+            <img src="../../image/66.png" alt="">
+        </div>
+        <div id="footer">
+        <p>
+            <span class="max">
+                <img src="../../image/pen.png" alt="">报名
+            </span>
+            <span class="min">
+                <img src="../../image/zf.png" alt="">
+            </span>
+        </p> 
+        </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script type="text/javascript">
+ 	window.onload = function(){
+         var obj = null
+         getCookie('index')
+          function getCookie(name) {
+              var message = document.cookie.split(';')
+              // var reg = new RegExp('^'+name+'')
+              var arr = []
+              
+              la:
+              for (var i = 0; i < message.length; i++) {
+                  arr[i] = message[i].split('=')
+                  for (var y = 0; y < arr.length; y++) {
+                      if ($.trim(arr[y][0]) === $.trim(name)) {
+                          arr = arr[y][1]
+                          obj = JSON.parse(arr)
+                          break la
+                      }
+                  }
+              }
+          }
+          let $span = $('header>span:first')
+          let $money = $('#salary .cover')
+          let $gps = $('#salary .center>p a')
+          console.log(obj)
+          $span.text(obj.message)
+          $money.text(obj.money)
+          $gps.text(obj.residue)
+
+          var $share = $('#share')
+          var $min = $('#footer .min')
+          $min.on('click',function(){
+            $share.css('display','block')
+          })
+          $share.on('click',function(){
+              $share.css('display', 'none')
+          })
+     }
+
+    </script>
+</body>
+</html>

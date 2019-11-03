@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/my/bind.css" />
+</head>
+
+<body>
+	<!--顶部标题栏-->
+	<!--页面标题-->
+	<header>
+		<div class="back"></div>
+		<div class="title">绑定支付宝</div>
+	</header>
+	<div id="content">
+		<div class="step">
+			<!--信息展示-->
+			<ul class="steplist">
+				<li><span class="stepText" index="0">信息填写</span></li>
+				<li><span class="stepText" index="1">身份验证</span></li>
+				<li><span class="stepText" index="2">设置密码</span></li>
+			</ul>
+			<div class="stepLine">
+				<!--圆点-->
+				<div class="stepPoint">
+					<span class="stepCycle currentStep"></span>
+					<span class="stepCycle"></span>
+					<span class="stepCycle"></span>
+				</div>
+				<div class="stepLineBg">
+					<div class="currentBg"></div>
+				</div>
+			</div>
+		</div>
+		<div id="bind">
+			<!--用户信息-->
+			<div class="infoWrite ">
+				<p>填写身份信息(用户找回密码，保障账号安全)</p>
+				<div class="textArea">
+					<input type="text" id="userNameTrue" value="" placeholder="真实姓名" />
+					<input type="text" id="userCodeNum" value="" placeholder="身份证号码" />
+				</div>
+				<p>输入要绑定的支付宝账号</p>
+				<input type="text" id="payCode" value="" placeholder="支付宝账号" />
+			</div>
+			<!--身份验证-->
+			<div class="infoWrite">
+				<p>填写支付宝绑定手机号</p>
+				<div class="textArea">
+					<input type="text" id="payCodePhone" value="" placeholder="支付宝手机号" />
+				</div>
+				<p>验证码</p>
+				<div id="verifyCode">
+
+					<input type="text" id="verifyCodein" value="" placeholder="验证码" />
+					<div id="verifyCodes"></div>
+				</div>
+				<p>请输入支付宝支付密码</p>
+				<input type="password" id="alipayPass" value="" placeholder="支付宝支付密码" />
+			</div>
+
+			<!--身份验证-->
+			<div class="infoWrite">
+				<div class="payCodeArea">
+					<p>设置支付密码</p>
+					<input type="text" name="" maxlength="1" id="payPassSet" value="" />
+					<ul id="payPassSetInput">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+
+				<div class="payCodeArea">
+					<p>确认支付密码</p>
+					<input type="text" name="" maxlength="1" id="rePayPass" value="" />
+					<ul id="rePayPassInput">
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="pageContr">
+			<div class="prev" stepIndex="0">取消</div>
+			<div class="next" stepIndex="0">下一步</div>
+		</div>
+
+	</div>
+	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/my/bind.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/classify.css">
+    <style>
+        #warp #work-list .nd{
+            width: 100%;
+        }
+    
+    .cover{
+        color:aqua;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="warp">
+        <div class="parcel">
+            <header>
+                <span class="left"><img src="../../image/back.png" alt=""></span>
+                <span class="unset">实习</span>
+            </header>
+            <div class="classify">
+                <span>
+                    <a>全部岗位</a><img src="../../image/xiasanjiao.png" alt="">
+                </span>
+                <span>
+                    <a>实习天数(周)</a><img src="../../image/xiasanjiao.png" alt="">
+                </span>
+                <span>
+                    <a>日薪(元)</a><img src="../../image/xiasanjiao.png" alt="">
+                </span>
+            </div>
+        </div>
+        <div id="shade">
+            <div class="shade-classify clearfix">
+                <ul class="clearfix ul1">
+                    <li>软件</li>
+                    <li>客服</li>
+                    <li>行政</li>
+                    <li>运营</li>
+                    <li>翻译</li>
+                    <li>销售</li>
+                    <li>人力</li>
+                    <li>导购</li>
+                    <li>传单</li>
+                    <li>礼仪</li>
+                    <li>仓管</li>
+                    <li>物流</li>
+                    <li>模特</li>
+                    <li>音乐</li>
+                    <li>物流</li>
+                    <li>咨询</li>
+                    <li>美术</li>
+                    <li>设计</li>
+                    <li>培训</li>
+                    <li>教育</li>
+                    <li>法律</li>
+                    <li>助理</li>
+                    <li>其他</li>
+                </ul>
+                <ul class="clearfix ul3">
+                    <li>不限</li>
+                    <li>2天</li>
+                    <li>3天</li>
+                    <li>4天</li>
+                    <li>5天</li>
+                    <li>6天</li>
+                    <li>一周</li>
+                    <li>一个月</li>
+                </ul>
+                <ul class="clearfix ul4">
+                    <li>50元以下</li>
+                    <li>50~100</li>
+                    <li>100~150</li>
+                    <li>150~200</li>
+                    <li>200~250</li>
+                    <li>250~300</li>
+                    <li>300~400</li>
+                    <li>400以上</li>
+                    <li>薪资不限</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div id="work-list">
+            <ul>
+            </ul>
+        </div>
+
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/htmlFont.sizeRoot.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+        window.onload = function () {
+            //ajax获取json数据
+            !(function () {
+                // var $center = $('#work-list .center p:first-child')
+                var jsonData = Fun.getJson("practice.json");
+                var $uls = $('#work-list ul')
+                console.log(jsonData)
+                var $color = $('#work-list .center .color')
+                var $last = $('#work-list .center p:last-child')
+                var $logo = $('#work-list .logo')
+                for (let i = 0; i < jsonData.name.length; i++) {
+                    $uls[0].innerHTML +=`<li>
+                    <div class="logo">
+                        <img src="${jsonData.logo[i % jsonData.logo.length]}">
+                    </div>
+                    <div class="center">
+                        <p>${jsonData.name[i]}</p>
+                        <p>${jsonData.work[i]}</p>
+                    </div>
+                    <div class="right">
+                            <span">
+                            ${jsonData.date[i]}
+                            </span>
+                        <p class="nd">
+                            <span class="cover"> 
+                                ${jsonData.moeny[i]}
+                                </span>${jsonData.tim[i]}
+                            </p>
+                    </div>
+                </li>`
+                    // $last[i].innerHTML = jsonData.work[i % jsonData.name.length] 
+                }
+            })()
+           var $list = $('#work-list li')
+            $list.on('click',function(){
+                    console.log($(this).children('.center').children(':first(p)').text())
+                    var name = $(this).children('.center').children(':first(p)').text()
+                    // var residue = $(this).children('.right').children('.nd').text()
+                    var money = $(this).children('.right').children().children('.nd').text()
+                    console.log(money)
+                    // var quantity = $(this).parent().children('.right').children('p').children('span').text()
+                    // console.log(name,residue)
+                    var obj = {
+                        "message": name,
+                        "money": money,
+                        "residue": "中国"
+                        // "quantity": quantity
+                    }
+                    obj = JSON.stringify(obj)
+                    // console.log(obj)
+                    document.cookie ='index=' + obj + ';expires =' + new Date(new Date + 7);
+                    window.open("particulars.html", "_self");
+
+                    // 
+            })
+
+            //返回上一个页面
+            var back = document.querySelector('header .left')
+            back.addEventListener('click', function () {
+                window.history.back()
+            })
+            //点击分类出现二级菜单
+            !(function () {
+                var $classify = $('.classify>span')
+                var $ul = $('#shade ul')
+                var index = 0
+                var unset = $('header>.unset').text()
+
+                $classify.on('click', function (e) {
+                    $('#shade').css('display', 'flex')
+                    $ul[index].style.display = 'none'
+                    if ($(this).index() == 2) {
+                        var $parent = $(this).children('a')
+                        $ul[$(this).index()].style.display = 'flex'
+                        $($ul[$(this).index()]).children().on('touchstart', function () {
+                            $parent.text($(this).text())
+                            ajax()
+                        })
+                    } else {
+                        $ul[$(this).index()].style.display = 'flex'
+                    }
+                    index = $(this).index()
+                    e.stopPropagation()
+                })
+                $('body').on('click', function () {
+                    $('#shade').css('display', 'none')
+                })
+            })()
+            var now = 0
+            var $list = $('#shade ul:first-child>li')
+            var list = $('#work-list li>.logo')
+            var $over = $('.over')
+
+            // $ul.on('touchstart',function(){
+            //     now = $(this).index()
+            // })
+            $list.on('click', function () {
+                var yeas = true
+                list.parent().css('display', 'flex')
+                $over.css('display', 'none')
+                // $('#task-status>ul>li>span')[0].innerHTML = $(this).html()
+                var $li = $(this).html()
+                // console.log($li)
+                for (var i = 0; i < list.length; i++) {
+                    if (list[i].innerText === $li) {
+                        yeas = false
+                    } else {
+                        // list[i].parentNode.style.display = 'none'
+                    }
+                }
+                if (yeas) $over.css('display', 'block')
+            })
+
+            let $shade = $('#shade')
+            console.log($shade)
+            $shade.on('click',function(){
+                $shade.css('display','none')
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my/option.css"/>
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">意见反馈</div>
+			<div class="changeBtn"></div>
+		</header>
+		<div id="content">
+			<div class='textarea-wrapper'>
+				<textarea class="textarea-item" name="content" placeholder="请输入您的意见..." maxlength="200" spellcheck="false"></textarea>
+				<div class="textarea-count">
+					<span class="textareaInput">0</span>/<span class="textareaTotal">200</span>
+				</div>
+			</div>
+			<div id="uploadArea">
+
+				<div id="upload"><input type="file" name="file" id="file"multiple="multiple" value="" /></div>
+				<p>(选项，上传照片，最多可上传3张)</p>
+				<ul id="imgArea"></ul>
+			</div>
+		</div>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function() {
+				window.open("my.html", "_self");
+			})
+
+			$(".textarea-item").keyup(function() {
+				lenInput = $(this).val().length;
+				if(lenInput > 0 && lenInput <= 200) {
+					$('.textareaInput').html(lenInput);
+				}
+			});
+			//上传
+			//设置图片路径数组
+			var imgArry=[], files;
+			$("#file").change(function(e) {
+				var imgLen = $('#imgArea>li').length;
+				if(imgLen >= 3) {
+						layer.msg('最多上传3张照片', {
+							icon: 2,
+							time: 3000,
+							offset: "c"
+						});
+					return;
+				}
+				//限制单次批量上传的数量
+				var num = e.target.files.length;
+				var numall = imgLen + num;
+				if(num > 3 || numall > 3) {
+						layer.msg('最多上传3张照片', {
+							icon: 2,
+							time: 3000,
+							offset: "c"
+						});
+					return;
+				} 
+				 files=this.files;
+				imgArry = imgArry.concat(Array.from(files));
+						
+				$("#imgArea").html("");
+				for(var i=0;i<imgArry.length;i++){
+				showImg(imgArry[i])
+				}
+
+			});
+			function showImg (file) {
+					if(window.FileReader) {
+						var reader = new FileReader();
+						reader.readAsDataURL(file);
+						//监听文件读取结束后事件    
+						reader.onloadend = function(e) {
+							$("#imgArea").append('<li><img src="' + this.result + '"/><span class="del">×</span></li>').children(':last').hide().fadeIn(500);
+						};
+					}
+			}
+			
+			//删除
+			$("#imgArea").on('click', '.del', function() {
+				
+				var imgs = $(this).parent();
+				layer.confirm('您确定要删除该图片吗？',{icon: 3, title:'提示',area:['300px','200px']}, {
+					btn: ['确定', '取消'] //按钮
+				}, function() {
+					var index = imgs.index();
+				imgArry.splice(index, 1);
+					imgs.remove();
+					layer.close(layer.index);
+				}, function() {
+
+				});
+			});
+			
+			//提交
+			$(".changeBtn").click(function(){
+				console.log(imgArry);
+			})
+		</script>
+	</body>
+
+</html>

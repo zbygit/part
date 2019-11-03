@@ -1,0 +1,45 @@
+{
+
+	"part_time": [
+		{
+			"companyName": "北京万港通信技术有限公司",
+			"abort": "2019-10-10",
+			"collectState": "正在招"
+		}, {
+			"companyName": "北京诵读文化发展有限公司",
+			"abort": "2019-10-10",
+			"collectState": "正在招"
+		}, {
+			"companyName": "北京南天信息工程有限公司",
+			"abort": "2019-10-10",
+			"collectState": "正在招"
+		}, {
+			"companyName": "小元感知(北京)科技有限公司",
+			"abort": "2019-10-10",
+			"collectState": "以停招"
+		}
+	],
+	"bible": [
+		{
+			"bibleName": "ECMAScript 6 入门教程",
+			"foundTime": "2019-10-01",
+			"bibleIcon": "https://f11.baidu.com/it/u=4026546739,2906415259&fm=173&s=33C5376EADA29E8A4117A2660300F06F&w=640&h=334&img.JPEG&access=215967316"
+			
+		}, {
+			"bibleName": "一个程序员的自由职业者生涯",
+			"foundTime": "2019-10-03",
+			"bibleIcon": "http://p.ananas.chaoxing.com/star3/733_434/54252ac75370243d07483c0a.jpg"
+			
+		}, {
+			"bibleName": "技能宝典|Excel用不熟练？",
+			"foundTime": "2019-10-10",
+			"bibleIcon": "https://zhaopin-rd5-pub.oss-cn-beijing.aliyuncs.com/imgs/company/2c120d9c413ea74ad45387783408d6a3.jpg"
+			
+		},{
+			"bibleName": "技能宝典|Excel用不熟练？",
+			"foundTime": "2019-10-21",
+			"bibleIcon": "https://zhaopin-rd5-pub.oss-cn-beijing.aliyuncs.com/imgs/company/2c120d9c413ea74ad45387783408d6a3.jpg"
+			
+		}
+	]
+}

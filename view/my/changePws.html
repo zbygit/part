@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/my/set.css" />
+	<style type="text/css">
+		.ru {
+			width: 100%;
+			height: 5rem;
+			line-height: 5rem;
+			margin-bottom: 1.5rem;
+		}
+
+		.ru input {
+			width: 90%;
+			border: none;
+			display: block;
+			height: 100%;
+			margin-left: 5%;
+			line-height: 5rem;
+			text-indent: 1.5rem;
+			font-size: 1.8rem;
+		}
+
+
+
+		.changepwd {
+			margin-top: 6em;
+		}
+	</style>
+</head>
+
+<body>
+	<!--顶部标题栏-->
+	<!--页面标题-->
+	<header>
+		<div class="back"></div>
+		<div class="title">修改密码</div>
+
+	</header>
+	<div class="changepwd">
+		<div class="ru">
+			<input type="password" id="oldPwd" size="60" maxlength="60" placeholder="请输入原登录密码" />
+		</div>
+		<div class="ru">
+			<input type="password" id="newPwd" size="60" maxlength="60" placeholder="请输入新密码" />
+		</div>
+		<div class="ru">
+			<input type="password" id="rePwd" size="60" maxlength="60" placeholder="请确认密码" />
+		</div>
+	</div>
+	<div id="exit">提交</div>
+	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../..//lib/layer/layer.js"></script>
+	<script src="../../js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+		$(".back").click(function () {
+			window.History.back();
+		})
+		var userCookieArry = ($.cookie('userCookie') == "null") || ($.cookie('userCookie') == undefined) ? [] : JSON.parse($.cookie('userCookie'));
+		var currentUser = null;
+
+		for (let i = 0; i < userCookieArry.length; i++) {
+			if (userCookieArry[i].currentLogin == true) {
+				currentUser = userCookieArry[i];
+
+			}
+
+		}
+		$("#exit").click(function (params) {
+
+			if (currentUser.pass === $("#oldPwd").val()) {
+				if (Fun.regTest($("#newPwd"), 5).booleans == true && $("#newPwd").val().trim() != "") {
+					if ($("#newPwd").val() === $("#rePwd").val()) {
+						currentUser.pass = $("#newPwd").val();
+						layer.msg("密码修改成功", {
+							icon: 1,
+							time: 3000,
+							offset: "c"
+						});
+
+						$.cookie("userCookie", JSON.stringify(userCookieArry), {
+							expires: 7, path: "/"
+						});
+						setTimeout(function () {
+							window.open("../app/login.html", "_self");
+						}, 1500)
+					} else {
+						layer.msg('两次密码不一致', {
+							icon: 2,
+							time: 3000,
+							offset: "c"
+						});
+					}
+
+
+				} else {
+					layer.msg('您输入的密码格式不正确', {
+						icon: 2,
+						time: 3000,
+						offset: "c"
+					});
+				}
+
+			} else {
+				layer.msg('您输入的原始密码不正确', {
+					icon: 2,
+					time: 3000,
+					offset: "c"
+				});
+			}
+		})
+
+
+
+
+
+
+		$(".pageChange").click(function (e) {
+			var index = $(this).attr("page");
+			switch (index) {
+				case "1":
+					window.open("../my/editor.html", "_self");
+					break;
+				case "2":
+					window.open("../my/signUp.html", "_self");
+					break;
+				case "3":
+					window.open("../my/collect.html", "_self");
+					break;
+				default:
+					break;
+			}
+		})
+	</script>
+</body>
+
+</html>

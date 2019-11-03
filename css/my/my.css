@@ -1,0 +1,123 @@
+body {
+				background: #F5F5F5;
+			}
+			
+			#infoArea {
+				width: 100%;
+				position: relative;
+			}
+			
+			#userInfo {
+				width: 100%;
+				height: 25rem;
+				background: url(../../image/top_bg.png) no-repeat;
+				background-size: 100% 100%;
+				position: relative;
+				bottom: 0;
+			}
+			
+			#userInfo>img {
+				width: 6rem;
+				height: 6rem;
+				border-radius: 50%;
+				border: 5px solid #FFFFFF;
+				position: absolute;
+				left: 50%;
+				top: 25%;
+				transform: translate(-50%);
+			}
+			
+			#userName {
+				width: 100%;
+				height: 3rem;
+				line-height: 3rem;
+				font-size: 1.8rem;
+				color: #FFFFFF;
+				text-align: center;
+				position: absolute;
+				top: calc(25% + 7rem);
+			}
+			
+			#usertext {
+				width: 100%;
+				height: 3rem;
+				line-height: 3rem;
+				font-size: 1.4rem;
+				color: #FFFFFF;
+				text-align: center;
+				position: absolute;
+				top: calc(25% + 10rem);
+			}
+			
+			#userRecord {
+				width: 100%;
+				position: relative;
+				left: 50%;
+				top: -5%;
+				transform: translateX(-50%);
+				display: flex;
+				justify-content: center;
+				align-content: center;
+			}
+			
+			#userRecord>li {
+				font-size: 1.6rem;
+				padding: 0 10px;
+			}
+			
+			#userRecord>li:nth-of-type(2)>span {
+				padding: 0 25px;
+				border-right: 1px solid #C2C2C2;
+				border-left: 1px solid #C2C2C2;
+			}
+			
+			#userRecord>li img {
+				margin-right: 5px;
+				height: 1.4rem;
+				vertical-align: middle;
+			}
+			
+			#serArea {
+				margin-top: 2rem;
+				margin-bottom: 8.5rem;
+			}
+			
+			#my_resume {
+				width: 100%;
+				height: 5rem;
+				line-height: 5rem;
+				font-size: 1.8rem;
+				margin-bottom: 1rem;
+			}
+			
+			#resume {
+				width: 100%;
+				background: #FFFFFF url(../../image/my.png) 1rem center no-repeat;
+				background-size: 2.6rem auto;
+				color: #6F6F6F;
+				text-indent: 4rem;
+			}
+			
+			.pointer {
+				float: right;
+				width: 2rem;
+				height: 5rem;
+				background: url(../../image/arrow.png) 0 center no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			#otherDone {
+				width: 100%;
+			}
+			
+			#otherDone>li {
+				height: 5rem;
+				line-height: 5rem;
+				font-size: 1.8rem;
+				margin-bottom: 2px;
+				background: #FFFFFF;
+				text-indent: 1rem;
+			}
+			/*底部导航*/
+			
+			

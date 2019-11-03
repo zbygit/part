@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="../../css/my/set.css" />
+    <style type="text/css">
+        .contact {
+            margin-top: 6rem;
+        }
+
+        #info {
+            width: 90%;
+            margin-left: 5%;
+            line-height: 3rem;
+        }
+
+        .name {
+            font-size: 1.6rem;
+        }
+
+        .mapArea {
+            width: 90%;
+            height: 25rem;
+            margin: 1rem 5%;
+            position: relative;
+        }
+
+        #changeBtn {
+            width: 7rem;
+            background: #FF9F40;
+            height: 5rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #FFFFFF;
+            z-index: 1000000000000;
+            text-align: center;
+            line-height: 5rem;
+        }
+
+        #searchFriend {
+            width: 90%;
+            height: 3rem;
+            margin-top: 6rem;
+            margin-left: 5%;
+            background: #FFFFFF;
+            border-radius: 20px;
+            border: 1px solid #D2D2D2;
+        }
+
+        #search {
+            border: none;
+            width: 100%;
+            height: 3rem;
+            line-height: 3rem;
+            font-size: 1.6rem;
+            background: url(../../image/search.png) 1rem center no-repeat;
+            background-size: 2rem auto;
+            text-indent: 4rem;
+            color: #D2D2D2;
+        }
+
+        #search::-webkit-input-placeholder {
+            color: #D2D2D2;
+            font-size: 1.6rem;
+        }
+
+        #result {
+            margin-top: 1rem;
+            width: 100%;
+            background: #FFFFFF;
+
+        }
+
+        #result>li {
+            height: 5rem;
+            width: 100%;
+            line-height: 5rem;
+            font-size: 1.8rem;
+            display: flex;
+            border-bottom: 1px solid #F5F5F5;
+        }
+
+        #result>li.noFriend {
+            width: 100%;
+            height: 20rem;
+            text-align: center;
+            line-height: 20rem;
+            font-size: 2rem;
+            justify-content: center;
+        }
+
+        .letterIcon {
+            height: 4rem;
+            width: 4rem;
+            border-radius: 50%;
+            margin: 0.5rem 1rem;
+            border: 1px solid #C2C2C2;
+        }
+
+        .letterName {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--顶部标题栏-->
+    <!--页面标题-->
+    <header>
+        <div class="back"></div>
+        <div class="title">添加好友</div>
+
+    </header>
+    <div id="searchFriend">
+        <input type="text" id="search" value="" placeholder="请输入好友昵称快速查找" />
+    </div>
+    <ul id="result">
+
+    </ul>
+    <script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        var userCookieArry = ($.cookie('userCookie') == "null") || ($.cookie('userCookie') == undefined) ? [] : JSON.parse($.cookie('userCookie'));
+        console.log(userCookieArry);
+        $(".back").click(function () {
+            window.History.back();
+        })
+        var timer = null;
+
+        $("#search").keyup(function () {
+
+
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                var friendHtml = "";
+                console.log($("#search").val());
+                for (let i = 0; i < userCookieArry.length; i++) {
+                    if(userCookieArry[i].currentLogin==false && userCookieArry[i].friend==false){
+                    if (userCookieArry[i].nickname.toUpperCase().indexOf($("#search").val().toUpperCase()) >= 0 || userCookieArry[i].nickname.indexOf($("#search").val()) >= 0) {
+                     
+                        friendHtml += '<li class="friendItem" type="add" itemindex="' + i + '"><img src="' + userCookieArry[i].userIcon + '" class="letterIcon"><p class="letterName">' + userCookieArry[i].nickname + '</p>  </li>';
+                    }
+                }
+                }
+
+                if (friendHtml == "") {
+                    friendHtml = '<li class="noFriend">暂无相关联系人 </li>';
+                }
+                $("#result").html(friendHtml);
+                //好友列表点击
+                $(".friendItem").click(function () {
+                    window.open("friendInfo.html?itemIndex=" + $(this).attr("itemIndex") + "&type=" + $(this).attr("type"), "_self");
+                })
+                $("#search").val("");
+            }, 1000)
+
+
+        })
+
+
+
+    </script>
+</body>
+
+</html>

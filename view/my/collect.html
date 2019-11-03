@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/my/collect.css" />
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">我的收藏</div>
+		</header>
+		<!--按钮-->
+		<div id="collectMenu">
+			<div id="job" class="current menu">兼职收藏</div>
+			<div id="bible1" class="menu">宝典收藏</div>
+		</div>
+		<!--收藏区域-->
+		<div id="collectListArea">
+			
+			<!--兼职收藏-->
+			<ul class="collectList partTimeArea "></ul>
+			<!--宝典收藏-->
+			<ul class="collectList bibleArea"></ul>
+		</div>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function() {
+				window.open("my.html", "_self");
+			})
+
+			var jsonData = Fun.getJson("collect.json");
+			var partTimeHtml = "";
+			for(var i = 0; i < jsonData.part_time.length; i++) {
+				partTimeHtml += '<li class="collectItem">' +
+					'<div class="collectInfo">' +
+					'<div class="companyName">' + jsonData.part_time[i].companyName + '</div>' +
+					'<div class="abort">截止时间:&nbsp;<span>' + jsonData.part_time[i].abort + '</span></div>' +
+					'</div><div class="collectState">' + jsonData.part_time[i].collectState + '</div></li>';
+			}
+			var bibleHtml = "";
+			
+			//获取宝典收藏数据
+			var collectCookies = $.cookie("collect") == undefined ? [] : JSON.parse($.cookie("collect"));
+		
+			
+			var biblejson= Fun.getJson("treasury.json");
+			for (var i = 0; i <  collectCookies.length; i++) {
+				
+				jsonData.bible.push(biblejson[parseInt(collectCookies[i])]);
+			}
+	
+			for(var i = 0; i < jsonData.bible.length; i++) {
+				bibleHtml += '<li class="collectItem">' +
+					'<div class="collectInfo"><div class="bibleName">' + jsonData.bible[i].bibleName + '</div>' +
+					'<div class="foundTime">发布时间:&nbsp;<span>' + jsonData.bible[i].foundTime + '</span></div></div>' +
+					'<img src="' + jsonData.bible[i].bibleIcon + '" class="bibleIcon" /></li>';
+			}
+
+			$(".partTimeArea").append(partTimeHtml);
+			$(".bibleArea").append(bibleHtml);
+			//切换选项卡
+			$(".menu").click(function() {
+				$($(".collectList")[$(this).index()]).show().siblings().hide();
+				$($(".menu")[$(this).index()]).addClass("current").siblings().removeClass("current");
+			})
+		</script>
+	</body>
+
+</html>

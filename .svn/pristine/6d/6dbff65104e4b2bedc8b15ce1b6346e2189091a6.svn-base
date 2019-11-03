@@ -1,0 +1,230 @@
+body {
+				background: #F5F5F5;
+				position: relative;
+			}
+			
+			header {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+				height: 5rem;
+				background: #36D9D6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: space-between;
+			}
+			
+			.back {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/back.png)no-repeat;
+				background-size: auto 1.6rem;
+			}
+			
+			.title {
+				height: 5rem;
+				width: calc( 100% - 6rem);
+				line-height: 5rem;
+				font-size: 1.8rem;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			#btn {
+				float: left;
+				width: 60%;
+				height: 3rem;
+				margin-left: 20%;
+				margin-top: 1rem;
+			}
+			
+			#btn>li {
+				float: left;
+				width: 50%;
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				color: #FFFFFF;
+				border: 1px solid #FFFFFF;
+				margin: -1px;
+			}
+			
+			#btn>li.currentPage {
+				background: #FFFFFF;
+				color: #000000;
+			}
+			
+			.changeBtn {
+				height: 2rem;
+				width: 2rem;
+		
+			}
+			
+			#content {
+				position: absolute;
+				top: 5rem;
+				padding-bottom: 9rem;
+				width: 100%;
+			}
+			
+			.msgItem {
+				float: left;
+				width: calc(100% - 2rem);
+				margin-left: 1rem;
+			}
+			
+			.timer {
+				float: left;
+				width: 100%;
+				line-height: 3rem;
+				color: #6D6D6D;
+				text-align: center;
+			}
+			
+			.friendMsgArea,
+			.myMsgArea {
+				width: 100%;
+				float: left;
+				position: relative;
+			}
+			
+			.friendMsg {
+				float: left;
+				max-width: calc( 100% - 10rem);
+				background: #FFFFFF;
+				margin-top: 1rem;
+				position: relative;
+				border-radius: 8px;
+			}
+			
+			.myMsg {
+				float: right;
+				max-width: calc( 100% - 10rem);
+				background: #FFFFFF;
+				margin-top: 1rem;
+				position: relative;
+				border-radius: 8px;
+			}
+			
+			.pointleft {
+				width: 15px;
+				height: 15px;
+				transform: rotate(45deg);
+				position: absolute;
+				left: -8px;
+				background: #FFFFFF;
+				top: 10px;
+			}
+			
+			.pointright {
+				width: 15px;
+				height: 15px;
+				transform: rotate(45deg);
+				position: absolute;
+				left: calc(100% - 8px);
+				background: #FFFFFF;
+				top: 10px;
+			}
+			
+			.text {
+				position: relative;
+				z-index: 100;
+				padding: 0.5rem;
+				line-height: 2rem;
+				width: auto;
+				font-family: "微软雅黑";
+				color: #070707;
+				letter-spacing: 1px;
+			}
+			
+			.friendIcon {
+				float: left;
+				width: 5rem;
+				height: 5rem;
+				border-radius: 50%;
+				margin: 0 1rem;
+				background: #FFFFFF;
+			}
+			
+			.myIcon {
+				float: right;
+				width: 5rem;
+				height: 5rem;
+				border-radius: 50%;
+				margin: 0 1rem;
+				background: #FFFFFF;
+			}
+			
+			.msgItemlist {
+				margin-bottom: 1rem;
+			}
+			
+			.sendArea {
+				width: 100%;
+				height: 6rem;
+				position: fixed;
+				bottom: 0;
+				background: #FFFFFF;
+				display: flex;
+				z-index: 100000;
+			}
+			
+			#git {
+				width: 3rem;
+				height: 3rem;
+				margin-top: 1.5rem;
+				margin-left: 1rem;
+				background: url(../../image/git.png)center no-repeat;
+				background-size: 3rem auto;
+			}
+			#gifIcon{
+				display: none;
+				width: 100%;
+				position: fixed;
+				bottom: 6.5rem;
+				background: #FFFFFF;
+				z-index: 10000;
+				height: 20rem;
+				overflow-y:auto ;
+			}
+			#gifIcon img{
+				float: left;
+				width: 11.5%;
+				margin: 0.5rem 1%;
+				height: auto;
+			}
+			.git{
+				width: 1.6rem;
+				height: 1.6rem;
+			}
+			#ico {
+				width: 3rem;
+				height: 3rem;
+				margin-top: 1.5rem;
+				margin-left: 1rem;
+				background: url(../../image/ico.png)center no-repeat;
+				background-size: 3rem auto;
+				margin-right: 1rem;
+			}
+			
+			#text {
+				flex: 1;
+				height: 3.4rem;
+				margin-top: 1.3rem;
+				line-height: 2rem;
+				resize: none;
+				outline: none;
+				font-size: 1.6rem;
+			}
+			
+			#send {
+				width: 5rem;
+				height: 3rem;
+				line-height: 3rem;
+				text-align: center;
+				margin: 1.5rem 1rem;
+				color: #FFFFFF;
+				background: #35D9D6;
+			}

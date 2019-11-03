@@ -1,0 +1,82 @@
+body {
+				background: #F5F5F5;
+			}
+			
+			header {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+				height: 5rem;
+				background: #36D9D6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: space-between;
+			}
+			
+			.back {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/back.png)no-repeat;
+				background-size: auto 1.6rem;
+			}
+			
+			.title {
+				height: 5rem;
+				width: calc( 100% - 6rem);
+				line-height: 5rem;
+				font-size: 1.8rem;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			.pointer {
+				float: right;
+				width: 2rem;
+				height: 5rem;
+				background: url(../../image/arrow.png) 0 center no-repeat;
+				background-size: auto 2rem;
+			}
+			.radioChoose{
+				float: right;
+				width: 3rem;
+				height: 5rem;
+			}
+			/*设置单选框样式*/
+			#set {
+				width: 100%;
+				height: 4rem;
+				line-height: 4rem;
+				font-size: 1.8rem;
+				position: relative;
+				top: 6rem;
+				text-indent: 1rem;
+			}
+			
+			#otherDone {
+				width: 100%;
+				position: relative;
+				top: 6rem;
+			}
+			
+			#otherDone>li {
+				height: 5rem;
+				line-height: 5rem;
+				font-size: 1.8rem;
+				margin-bottom: 2px;
+				background: #FFFFFF;
+				text-indent: 1rem;
+			}
+			#exit{
+				width: 96%;
+				height: 4rem;
+				line-height: 4rem;
+				margin: 2%;
+				text-align: center;
+				background: #FF9900;
+				color: #FFFFFF;
+				font-size:1.8rem;
+				position: relative;
+				top: 9rem;
+			}

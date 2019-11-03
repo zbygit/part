@@ -1,0 +1,99 @@
+body {
+	background: #F5F5F5;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 5rem;
+	background: #36D9D6;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: space-between;
+}
+
+.back {
+	height: 2rem;
+	width: 2rem;
+	background: url(../../image/back.png)no-repeat;
+	background-size: auto 1.6rem;
+}
+
+.title {
+	height: 5rem;
+	width: calc( 100% - 6rem);
+	line-height: 5rem;
+	font-size: 1.8rem;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+
+/*报名列表*/
+
+#signUpList {
+	width: 100%;
+	position: relative;
+	top: 6rem;
+}
+
+#signUpList>li {
+	height: 8rem;
+	font-size: 1.8rem;
+	margin-bottom: 2px;
+	background: #FFFFFF;
+	display: flex;
+	justify-content: center;
+}
+
+#signUpList>li>.itemIcon {
+	width: 6rem;
+	height: 6rem;
+	margin: 1rem;
+}
+
+.signUpinfo {
+	flex: 1;
+	height: 6rem;
+	margin-top: 1rem;
+	width: calc(100% - 17rem);
+}
+
+.signUpName {
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.8rem;
+	font-weight: 600;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.time {
+	height: 3rem;
+	line-height: 3rem;
+	font-size: 1.2rem;
+	color: #8D8D8D;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.isSignUp {
+	float: right;
+	width: 8rem;
+	height: 3rem;
+	line-height: 3rem;
+	margin: 2.5rem 0.5rem;
+	font-size: 1.6rem;
+	text-align: center;
+	background: #36D9D6;
+	color: #FFFFFF;
+}
+
+.down {
+	background: #999999;
+}

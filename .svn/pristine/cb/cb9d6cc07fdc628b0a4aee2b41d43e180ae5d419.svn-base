@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/mytask.css">
+</head>
+<body>
+    <div id="warp">
+        <div class="fixed">
+            <header>
+                <span class="left"><img src="../../image/back.png" alt=""></span>
+                <span class="unset">我的任务</span>
+            </header>
+            <div id="task-status">
+                <ul class="clearfix">
+                    <li class="cover">全部</li>
+                    <li>待审核</li>
+                    <li>不及格</li>
+                    <li>已完成</li>
+                </ul>
+            </div>
+        </div>
+        <div id="list">
+            <ul>
+                <li>
+                    <div class="left">
+                        <p>【微信分享到朋友圈】</p>
+                        <span>&nbsp;2019-10-15</span>
+                    </div>
+                    <div class="right">
+                        审核中
+                    </div>
+                </li>
+                <li>
+                    <div class="left">
+                        <p>【米星】转发海报</p>
+                        <span>&nbsp;2019-10-14</span>
+                    </div>
+                    <div class="right">
+                        已通过
+                    </div>
+                </li>
+            </ul>
+            <p>没有对应的任务</p>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+    window.onload = function(){
+        var back = document.querySelector('header>.left')
+        back.addEventListener('touchstart', function () {
+            window.history.back()
+        })
+        
+        var $li = $('#task-status>ul>li')
+        var index = 0
+        var $list = $('#list li>.right')
+        var $p = $('#list>p')
+        $li.on('touchstart',function(){
+            $p.css('display','none')    
+            $($li[index]).removeClass('cover')
+            $(this).addClass('cover')
+            index = $(this).index()
+            var $this = $(this).html()
+            $list.parent().css({
+                display: 'block'
+            })
+            // console.log($list.parent().is(':visible'))
+            for(var i =0;i<$list.length;i++){
+            var a = false
+                var $string = $($list[i]).html()
+                for(var j = 0;j<$string.length;j++){
+                    for(var y=0;y<$this.length;y++){
+                        if ($string[j] === $this[y]) {
+                           a=true
+                        }
+                    }
+                }
+                if(a){
+                   
+                }else{
+                     $($list[i]).parent().css({
+                        display: 'none'
+                    });
+                    if($list.parent().is(':visible')){
+                        
+                    }else{
+                        $p.css('display','block')
+                    }
+                }
+            }
+        })
+        // console.log($list)
+        var li = document.querySelectorAll('#task-status>ul>li')
+        var list = document.querySelectorAll('#list li>.right')
+        li[0].addEventListener('touchstart',function(){
+            $p.css('display', 'none')
+            $list.parent().css('display','block')
+        })
+        // for(var i )
+    }
+    </script>
+</body>
+</html>

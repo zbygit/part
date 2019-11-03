@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/my/my_resume.css" />
+</head>
+
+<body>
+	<!--顶部标题栏-->
+	<!--页面标题-->
+	<header>
+		<div class="back"></div>
+		<div class="title">我的简历</div>
+	</header>
+	<ul id="userInfo">
+
+	</ul>
+	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			$(".back").click(function () {
+				window.open("my.html", "_self");
+			})
+			//获取json数据
+			var userCookieArry = ($.cookie('userCookie') == "null") || ($.cookie('userCookie') == undefined) ? [] : JSON.parse($.cookie('userCookie'));
+			for (let i = 0; i < userCookieArry.length; i++) {
+				if (userCookieArry[i].currentLogin == true) {
+					var info = '<li>昵称<span class="info">' + userCookieArry[i].nickname + '</span></li>' +
+						'<li>个性签名<span class="info">' + userCookieArry[i].signature + '</span></li>' +
+						'<li>真实姓名<span class="info">' + userCookieArry[i].username + '</span></li>' +
+						'<li>年龄<span class="info">' + userCookieArry[i].age + '</span></li>' +
+						'<li>性别<span class="info">' + userCookieArry[i].sex + '</span></li>' +
+						'<li>身高<span class="info">' + userCookieArry[i].height + '</span></li>' +
+						'<li>手机号<span class="info">' + userCookieArry[i].regPhone + '</span></li>' +
+						'<li>所在学校<span class="info">' + userCookieArry[i].school + '</span></li>';
+					$("#userInfo").html(info);
+				}
+
+			}
+
+
+
+		})
+	</script>
+</body>
+
+</html>

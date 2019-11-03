@@ -1,0 +1,263 @@
+body {
+				background: #F5F5F5;
+			}
+			
+			header {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+				height: 5rem;
+				background: #36D9D6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: space-between;
+			}
+			
+			.back {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/back.png)no-repeat;
+				background-size: auto 1.6rem;
+			}
+			
+			.title {
+				height: 5rem;
+				width: calc( 100% - 6rem);
+				line-height: 5rem;
+				font-size: 1.8rem;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			.changeBtn {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/set.png)no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			#content {
+				width: 100%;
+				position: relative;
+				top: 6rem;
+			}
+			/*步骤显示*/
+			
+			.step {
+				width: calc(100% - 2rem);
+				margin-left: 1rem;
+				height: 5rem;
+				position: relative;
+			}
+			
+			.steplist {
+				width: 100%;
+				height: 5rem;
+				float: left;
+			}
+			
+			.steplist>li {
+				float: left;
+				width: 33.33330%;
+				height: 5rem;
+				text-align: center;
+				font-size: 1.4rem;
+				position: relative;
+			}
+			
+			.stepText {
+				position: relative;
+				top: 0.5rem;
+				width: 100%;
+			}
+			
+			.stepLine {
+				width: 70%;
+				height: 2rem;
+				margin-left: 15%;
+				position: absolute;
+				top: 2.4rem;
+			}
+			
+			.stepPoint {
+				width: 100%;
+				height: 2rem;
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			.stepCycle {
+				width: 2rem;
+				height: 2rem;
+				background: #CCCCCC;
+				border-radius: 50%;
+				z-index: 1;
+			}
+			
+			.stepLineBg {
+				width: 99%;
+				height: 0.8rem;
+				position: absolute;
+				top: 0.7rem;
+				left: 0.5%;
+				background: #CCCCCC;
+			}
+			
+			.currentBg {
+				width: 0%;
+				height: 100%;
+				background: #009999;
+				transition: all 2s;
+			}
+			
+			.currentStep {
+				background: #009999;
+			}
+			
+			.infoWrite {
+				font-size: 1.6rem;
+				display: none;
+				position: relative;
+			}
+			.infoWrite:nth-of-type(1) {
+				display: block;
+			}
+			
+			.infoWrite>p {
+				width: calc(100% - 2rem);
+				margin: 1rem;
+				color: #6D6D6D;
+			}
+			
+			.textArea {
+				width: 100%;
+				background: #FFFFFF;
+				height: auto;
+			}
+			
+			.textArea>input {
+				border: none;
+				outline: none;
+				display: inline-block;
+				width: calc(100% - 2rem);
+				height: 5rem;
+				margin-left: 1rem;
+				font-size: 1.6rem;
+			}
+			
+			#userNameTrue {
+				border-bottom: 1px solid #CCCCCC;
+			}
+			
+			#payCode,
+			#verifyCode,
+			#alipayPass {
+				border: none;
+				outline: none;
+				display: inline-block;
+				width: 100%;
+				height: 5rem;
+				text-indent: 1rem;
+				font-size: 1.6rem;
+				background: #FFFFFF;
+			}
+			#verifyCodein{
+				float: left;
+				width: calc(100% - 10rem);
+				height: 5rem;
+				border: none;
+				outline: none;
+				text-indent: 1rem;
+				display: inline-block;
+			}
+			#verifyCodes{
+				width: 8rem;
+				float: right;
+				height: 4rem;
+				line-height: 4rem;
+				margin-top: calc(0.5rem - 1px);
+				margin-right: 1rem;
+				border: 1px solid #CCCCCC;
+				text-align: center;
+				font-size: 2rem;
+				font-family: Arial;
+			font-style: italic;
+			letter-spacing: 0.2rem;
+			font-weight: bold;
+				
+				
+			}
+			#pageContr {
+				width: calc(100% - 2rem);
+				height: 4rem;
+				color: #FFFFFF;
+				margin: 4rem 1rem;
+				line-height: 4rem;
+				text-align: center;
+				display: flex;
+				justify-content: space-between;
+				align-content: space-around;
+			}
+			
+			#pageContr>div {
+				width: 40%;
+				background: #36D9D6;
+			}
+			
+			.payCodeArea {
+				width: calc(100% - 2rem);
+				margin-left: 1rem;
+				font-size: 1.6rem;
+				position: relative;
+				margin-bottom: 7rem;
+			}
+			
+			.payCodeArea>input {
+				margin-top: 3rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				opacity: 0;
+				flex: 1;
+				border: none;
+				outline: none;
+				display: inline-block;
+				width: 0%;
+				margin: 0 1px;
+				text-indent: 1000px;
+				text-align: center;
+			}
+			
+			#payPassSetInput,
+			#rePayPassInput {
+				margin-top: 3rem;
+				display: flex;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				justify-content: space-between;
+			}
+			
+			#payPassSetInput>li,
+			#rePayPassInput>li {
+				width: 20%;
+				margin: 0 1px;
+				background: #FFFFFF;
+				position: relative;
+			}
+			
+			.point {
+				display: block;
+				width: 10px;
+				height: 10px;
+				background: #000000;
+				border-radius: 50%;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+			}

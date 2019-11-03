@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/work.css">
+</head>
+<body>
+    <div id="warp">
+        <header>
+            <span class="left"><img src="../../image/back.png" alt=""></span>
+            <input type="text" placeholder='客服'>
+            <span class="sp">搜索</span>
+        </header>
+        <div id="work-list">
+            <ul>
+                <li>
+                    <div class="logo">
+                        仓库
+                    </div>
+                    <div class="center">
+                        <p>淘宝仓库管理员</p>
+                        <p><span class="color">￥150.0</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>宝山区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk1">
+                        实习
+                    </div>
+                    <div class="center">
+                        <p>咖啡师实习兼职</p>
+                        <p><span class="color">￥100.0</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>杨浦区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk5">
+                        促销
+                    </div>
+                    <div class="center">
+                        <p>饮料促销员</p>
+                        <p><span class="color">￥90.0</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>静安区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk2">
+                        实习
+                    </div>
+                    <div class="center">
+                        <p>行政助理实习生</p>
+                        <p><span class="color">100~120</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>静安区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk1">
+                        促销
+                    </div>
+                    <div class="center">
+                        <p>家乐福商场促销员</p>
+                        <p><span class="color">120~150</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>静安区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        仓管
+                    </div>
+                    <div class="center">
+                        <p>淘宝仓库管理员</p>
+                        <p><span class="color">100~120</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>海淀区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk2">
+                        促销
+                    </div>
+                    <div class="center">
+                        <p>蒙牛/伊利卖场促销</p>
+                        <p><span class="color">100~150</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>海淀区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        仓管
+                    </div>
+                    <div class="center">
+                        <p>工厂仓库管理员</p>
+                        <p><span class="color">100~120</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>涪陵区</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk5">
+                        婚庆
+                    </div>
+                    <div class="center">
+                        <p>婚庆司仪兼职</p>
+                        <p><span class="color">400~500</span>/天</p>
+                    </div>
+                    <div class="right">
+                        <span class="small">认证</span>
+                        <p>小石区</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+    window.onload = function(){
+        var ajax = Fun.getJson('')
+        
+
+
+
+
+        var back = document.querySelector('header .left')
+        back.addEventListener('touchstart', function () {
+            window.history.back()
+        })
+        var $spa = $('header>span').eq(1)
+        var $input = $('header>input')
+        $input.on('input',fn)
+        var $center = $('#work-list .center>p:first-child')
+        $spa.on('click',fn)
+        function fn() {
+            var $ipt = $('header>input').val()
+            var $list = $('#work-list .center>p:first-child')
+            var $li = $('#work-list li')
+            $li.css('display', 'flex')
+            for (let i = 0; i < $list.length; i++) {
+                if ($list[i].innerText.indexOf($ipt) < 0) {
+                    $($list[i]).parent().parent().css('display', 'none')
+                }
+            }
+        }
+
+        //职位详情
+        $("#work-list li").click(function () {
+            window.open("particulars.html", "_self");
+            // 
+            var name = $(this).children('.center').children(':first(p)').text()
+            var residue = $(this).children('.right').children(':last()').text()
+            var money = $(this).children('.center').children(':last(p)').text()
+            // var quantity = $(this).parent().children('.right').children('p').children('span').text()
+            console.log(name, residue, money)
+            var obj = {
+                "message": name,
+                "money": money,
+                "residue": residue
+                // "quantity": quantity
+            }
+            obj = JSON.stringify(obj)
+            document.cookie = 'index=' + obj + ';expires =' + new Date(new Date + 7);
+            // 
+        })
+
+    }
+    </script>
+</body>
+</html>

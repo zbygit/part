@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+		<style type="text/css">
+			body {
+				background: #F5F5F5;
+			}
+			
+			header {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+				height: 5rem;
+				background: #36D9D6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: space-between;
+			}
+			
+			.back {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/back.png)center no-repeat;
+				background-size: auto 1.6rem;
+			}
+			
+			.title {
+				height: 5rem;
+				width: calc( 100% - 9rem);
+				line-height: 5rem;
+				font-size: 1.8rem;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			.changeBtn {
+				height: 2rem;
+				width: 5rem;
+			}
+			
+			.collection {
+				float: left;
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/shoucang.png)no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			.unkone {
+				float: right;
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/warning.png)no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			#content {
+				width: 100%;
+				position: relative;
+				top: 6rem;
+				padding-bottom: 7rem;
+			}
+			
+			#travelIcon {
+				width: 100%;
+				height: 18rem;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+			
+			.scenery {
+				width: 100%;
+				height: 18rem;
+				position: relative;
+				top: 0;
+				left: 0;
+			}
+			
+			.sceneryInfo {
+				height: 5rem;
+				width: 100%;
+				position: absolute;
+				bottom: 0.5rem;
+				left: 0;
+				z-index: 1;
+				text-indent: 1rem;
+				color: #FFFFFF;
+			}
+			
+			.senceryBox {
+				height: 3rem;
+				line-height: 3rem;
+				font-size: 2rem;
+				letter-spacing: 0.2rem;
+			}
+			
+			.sceneryAddress {
+				height: 2rem;
+				line-height: 2rem;
+				font-size: 1.6rem;
+				background: url(../../image/pos_1.png)1rem center no-repeat;
+				background-size: auto 1rem;
+				text-indent: 3rem;
+			}
+			
+			.contentArea {
+				width: 100%;
+				margin-bottom: 1rem;
+				background: #FFFFFF;
+				padding-bottom: 1rem;
+			}
+			
+			.contentArea>.ItemTitle {
+				height: 3.6rem;
+				width: calc(100% - 2rem);
+				margin-left: 1rem;
+				background: url(../../image/address.png) 0 center no-repeat;
+				background-size: 3rem auto;
+				line-height: 3.6rem;
+				font-size: 1.8rem;
+				text-indent: 3.6rem;
+			}
+			
+			.contentArea>.ItemText {
+				color: #999999;
+				margin-left: 1rem;
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+			
+			.itemContent {
+				width: calc(100% - 2rem);
+				margin-left: 1rem;
+				color: #999999;
+				font-size: 1.2rem;
+			}
+			
+			.instructions {
+				margin: 1.5rem 10%;
+				width: calc(80% - 1rem);
+				border: 1px solid #36d9d6;
+				color: #36d9d6;
+				border-radius: 5px;
+				padding: 0.5rem;
+				margin-bottom: 1rem;
+			}
+			
+			#tel {
+				color: #36d9d6;
+			}
+			
+			.phoneTip {
+				width: calc(100% - 4.6rem);
+				margin-left: 4.6rem;
+				background: url(../../image/tip.png)0 center no-repeat;
+				background-size: 1rem auto;
+				text-indent: 1.5rem;
+				color: #999999;
+				font-size: 1.2rem;
+				line-height: 2rem;
+			}
+			
+			.introduce {
+				width: 100%;
+			}
+			
+			.introduce>li {
+				width: 100%;
+			}
+			
+			.introduce>li>img {
+				width: 100%;
+				height: auto;
+			}
+			
+			.introduce>li>p {
+				padding: 0.5rem 1rem;
+				text-align: justify;
+				line-height: 2rem;
+			}
+			/*底部*/
+			
+			#bottom {
+				width: 100%;
+				height: 6rem;
+				background: #FFFFFF;
+				position: fixed;
+				display: flex;
+				bottom: 0;
+				justify-content: center;
+				align-content: center;
+				color: #FFFFFF;
+			}
+			
+			#send {
+				flex: 1;
+				margin: 0 1rem;
+				margin-top: 1rem;
+				background: #36D9D6;
+				line-height: 4rem;
+				height: 4rem;
+				text-align: center;
+				font-size: 1.8rem;
+			}
+			
+			#share {
+				width: 8rem;
+				margin-top: 1rem;
+				margin-right: 1rem;
+				background: #36D992 url(../../image/forward.png)1rem center no-repeat;
+				background-size: 2rem auto;
+				text-indent: 4rem;
+				line-height: 4rem;
+				height: 4rem;
+				font-size: 1.4rem;
+			}
+			/*分享。转发*/
+			
+			#shareBox {
+				display: none;
+				width: 100%;
+				height: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 1900;
+			}
+			
+			#shareList {
+				
+				width: 100%;
+				height: 20rem;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background: #FFFFFF;
+			}
+			
+			#shareList>li {
+				float: left;
+				width: 25%;
+				height: 10rem;
+				text-align: center;
+				line-height: 15rem;
+			}
+			
+			#shareList>li:nth-of-type(1) {
+				background: url(../../image/a.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(2) {
+				background: url(../../image/b.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(3) {
+				background: url(../../image/QQ1.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(4) {
+				background: url(../../image/kongjian.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(5) {
+				background: url(../../image/weib.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(6) {
+				background: url(../../image/c.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+			
+			#shareList>li:nth-of-type(7) {
+				background: url(../../image/d.png)center 1rem no-repeat;
+				background-size: 5rem auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">风景名称风景名城</div>
+			<div class="changeBtn">
+				<div class="collection"></div>
+				<div class="unkone"></div>
+			</div>
+		</header>
+		<!--内容详情-->
+		<div id="content">
+			<div class="area">
+			
+			</div>
+		</div>
+		<!--底部按钮-->
+		<div id="bottom">
+			<div id="send">立即报名</div>
+			<div id="share">转发</div>
+		</div>
+
+		<!--弹窗-->
+		<div id="shareBox">
+			<ul id="shareList">
+				<li>微信好友</li>
+				<li>朋友圈</li>
+				<li>QQ好友</li>
+				<li>QQ空间</li>
+				<li>微博</li>
+				<li>复制链接</li>
+				<li>我的好友</li>
+			</ul>
+		</div>
+
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function() {
+				window.open("travel.html", "_self");
+			})
+			var jsonData = Fun.getJson("travel.json")[parseInt(Fun.getUrl().index)];
+			$(".area").html(Fun.getJson("travel.json")[parseInt(Fun.getUrl().index)].content)
+			//打电话
+			$("#tel").click(function() {
+				window.location.href = 'tel://15933461106';
+			})
+			$("#share").click(function(e) {
+				$("#shareBox").fadeIn(100);
+			})
+			$("#shareList").click(function(e) {
+				e.stopPropagation();
+			})
+			$("#shareBox").click(function(e) {
+				$(this).fadeOut(100);
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/my/focus.css"/>
+	</head>
+	<body>
+		<!--顶部标题栏-->
+		<!--页面标题-->
+		<header>
+			<div class="back"></div>
+			<div class="title">已关注商家</div>
+		</header>
+		
+			<ul id="focusList"></ul>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(".back").click(function  () {
+				window.open("my.html","_self");
+			})
+				var jsonData = Fun.getJson("focus.json");
+		
+			var html = "";
+			for(var i = 0; i < jsonData.length; i++) {
+				html += '<li class="focusItem"><img src="'+jsonData[i].itemIcon+'"class="itemIcon"/>'+
+					'<div class="focusinfo"><div class="focusName">'+jsonData[i].signUpName+'</div>'+
+					'<div class="type"><span class="certification">'+jsonData[i].certification+'</span>'+
+						'<span class="team">团队<span class="personNum">'+jsonData[i].teamNum+'</span>人</span></div></div></li>'
+			}
+
+			$("#focusList").append(html);
+	
+		</script>
+	</body>
+</html>

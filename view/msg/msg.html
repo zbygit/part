@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+		<link rel="stylesheet" href="../../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../../css/msg/msg.css"/>
+	</head>
+
+	<body>
+		<header>
+			<div class="back"></div>
+			<div class="title">
+				<ul id="btn">
+					<li class="currentPage pageChange">好友</li>
+					<li class="pageChange">消息</li>
+				</ul>
+			</div>
+			<div class="changeBtn"></div>
+		</header>
+		<div id="content">
+
+			<div id="friendAreaBox" class="contentList">
+				<div id="searchFriend">
+					<input type="text" id="search" value="" placeholder="请输入好友昵称快速查找" />
+				</div>
+				<!--好友列表区域-->
+				<div id="friendArea">
+					<!--好友-->
+					<div id="friend"></div>
+
+				</div>
+					<ul class="letter"></ul>
+			</div>
+			<ul id="msgList"class="contentList">
+				<li>
+					<img src="../../image/pjx1.jpg" alt="" class="friendIcon" />
+					<div class="msgInfo">
+						<div class="friendName">小猫爱吃鱼</div>
+						<div class="msgText">小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼小的山东法萨芬的猫爱吃鱼</div>
+					</div>
+					<div class="sendTime">昨天&nbsp;14:32</div>
+				</li>
+			</ul>
+		</div>
+			<!--字母-->
+	
+		<letter></letter>
+
+	
+		<!--底部导航区域-->
+		<ul class="footerArea">
+			<li pageTo="1"><img src="../../image/part-time1.png" />兼职</li>
+			<li pageTo="2"><img src="../../image/bible1.png" />宝典</li>
+			<li pageTo="3"><img src="../../image/msg2.png" />消息</li>
+			<li pageTo="4"><img src="../../image/my1.png" />我的</li>
+		</ul>
+		<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../lib/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/jquery.cookie.js"></script>
+		<script src="../../js/msg/pinying.js"></script>
+		<script src="../../js/msg/msg.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+
+</html>

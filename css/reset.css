@@ -1,0 +1,114 @@
+body,
+p,
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+body {
+	font: 14px/1.5 tahoma, arial, '微软雅黑', '\5b8b\4f53', sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: #666666;
+
+}
+
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+
+div {
+	margin: 0;
+	padding: 0;
+}
+
+input,
+button {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+
+button {
+	outline: none;
+}
+
+.leayer {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.mt10 {
+	margin-top: 10px;
+}
+
+.ml10 {
+	margin-left: 10px;
+}
+
+.mr10 {
+	margin-right: 10px;
+}
+
+.mb10 {
+	margin-bottom: 10px;
+}
+
+i {
+	/*font-style: normal;*/
+	color: #EAC3C3;
+	font-size: 12px;
+}
+
+.footerArea {
+				width: 100%;
+				float: left;
+				background: #FFFFFF;
+				border-top: 1px solid #C2C2C2;
+				position: fixed;
+				bottom: 0;
+			}
+			
+			.footerArea>li {
+				float: left;
+				width: 25%;
+				height: 6rem;
+				line-height: 10rem;
+				position: relative;
+				font-size: 1.6rem;
+				padding: 1rem 0;
+				text-align: center;
+			}
+			
+			.footerArea>li>img {
+				width: 3rem;
+				height: 3rem;
+				position: absolute;
+				left: 50%;
+				transform: translate(-50%);
+			}

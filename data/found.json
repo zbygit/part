@@ -1,0 +1,50 @@
+{
+	"hot": [
+		{
+			"contentIndex": "0",
+			"userIcon": "../image/tup_3.jpg",
+			"userName": "热门用户名称1",
+			"title": "热门用户名称1",
+			"content": "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+			"imgArry":"<img src='../image/mall_class_img.jpg'><img src='../image/mall_class_img1.jpg'><img src='../image/mall_class_img2.jpg'>",
+			"praiseNum": "32",
+			"sendTime":"2019-10-10"
+		}
+	],
+	"cityWide": [
+		{
+			"contentIndex": "0",
+			"userIcon": "../image/toux.jpg",
+			"userName": "来着星星的你",
+			"title": "轿跑SUV CX-4 来自广岛的魂动设计",
+			"content": "很多年前我和当时执掌奔驰中国设计中心的布雷老爷子闲聊，问他如何看奔驰的中国设计中心在北京，而宝马的中国设计室放在了上海。这个曾经执掌迈巴赫设计的法国人回答：他觉得北京才更有真正的“中国范儿”，更贴近这个东方国度的心脏，而上海太国际化大都市了。然后他笑说：对于来中国的各国设计师，住在上海会更舒服安逸，但某种程度上“他们是在偷懒”。",
+			"imgArry":"<img src='../image/mall_class_img.jpg'><img src='../image/mall_class_img1.jpg'><img src='../image/mall_class_img2.jpg'>",
+			"praiseNum": "5",
+			"sendTime":"2019-10-11"
+		}
+	],
+	"room": [
+		{
+			"contentIndex": "0",
+			"userIcon": "../image/toux.jpg",
+			"userName": "房产1",
+			"title": "房产1房产1房产1房产1",
+			"content": "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+			"imgArry":"<img src='../image/mall_class_img.jpg'><img src='../image/mall_class_img1.jpg'><img src='../image/mall_class_img2.jpg'>",
+			"praiseNum": "52",
+			"sendTime":"2019-10-12"
+		}
+	],
+	"car": [
+		{
+			"contentIndex": "0",
+			"userIcon": "../image/toux.jpg",
+			"userName": "汽车1",
+			"title": "汽车1汽车1汽车1汽车1汽车1",
+			"content": "文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容文章内容",
+			"imgArry":"<img src='../image/mall_class_img.jpg'><img src='../image/mall_class_img1.jpg'><img src='../image/mall_class_img2.jpg'>",
+			"praiseNum": "25",
+			"sendTime":"2019-10-13"
+		}
+	]
+}

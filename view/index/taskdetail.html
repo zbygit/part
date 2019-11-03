@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/taskdetail.css">
+    <link href="dist/css/share.min.css">
+    <script src="dist/js/share.min.js"></script>
+</head>
+<body>
+    <div id="warp">
+        <div class="fixed">
+            <header>
+                <span class="left"><img src="../../image/back.png" alt=""></span>
+                <span class="unset">【米星】转发海报</span>
+            </header>
+            <div class="img">
+            <img src="../../image/renwu.png" alt="">
+            </div>
+        </div>
+        <div id="salary">
+            <p class="top">
+                <img src="../../image/bai.png" alt="">
+                <span class="cover">￥0.8</span>
+                <span class="right">剩余量: <a></a></span>
+            </p>
+            <div class="center">
+                <p class="clearfix">
+                    <span class="fl"><img src="../../image/ASFASDFASDF_03.png" alt="">其他</span>
+                    <span class="fr"><img src="../../image/ASFASDFASDF_06.png" alt="">24小时内审核</span>
+                </p>
+                <p class="clearfix">
+                    <span class="fl"><img src="../../image/pos.png" alt="">全国</span>
+                    <span class="fr "><img src="../../image/ASFASDFASDF_15.png" alt="">2019-10-13</span>
+                </p>
+            </div>
+            <p class="top too">
+                <img src="../../image/volue.png" alt="">
+                <span class="cover1">任务步骤</span>
+            </p>
+            <ul class="book">
+                <li><p>1.扫海报二维码添加小秘书</p><img src="../../image/book.png" alt=""> </li>
+                <li>
+                    <p>2.转发海报到朋友圈，附上文字:</p>
+                    <p>转发海报并邀请好友加米星小秘书，赢限量版TomFord口红!</p>
+                    <p>例子如下图, 发朋友圈截图给小秘书并截图提交审核</p>
+                    <img src="../../image/book1.png" alt="">
+                </li>
+            </ul>
+        </div>
+        <div id="footer">
+            <p>
+                <span class="max">
+                    任务提交
+                </span>
+                <span class="min">
+                    <img src="../../image/zf.png" alt="">
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+    window.onload = function(){
+        var back = document.querySelector('header>.left')
+        back.addEventListener('touchstart',function(){
+            window.history.back()
+        })
+        getCookie('task')
+        function getCookie(name){
+            var message = document.cookie.split(';')
+            // var reg = new RegExp('^'+name+'')
+            var arr = []
+            console.log(message)
+            la:
+            for (var i = 0; i < message.length; i++) {
+                arr[i] = message[i].split('=')
+                for(var y = 0;y<arr.length;y++){
+                    if($.trim(arr[y][0])===$.trim(name)){
+                        arr = arr[y][1]
+                        break la
+                    }
+                }
+            }
+
+            var str = JSON.parse(arr)
+            console.log(str)
+            document.querySelector('header>.unset').innerHTML = str.message
+            $('#salary>.top>.cover').html(str.money)
+            $('#salary>.top>.right>a').html(str.quantity)
+        }
+        
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+		header {
+				position: fixed;
+				top: 0;
+				z-index: 1000;
+				width: 100%;
+				height: 5rem;
+				background: #36D9D6;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				align-content: space-between;
+			}
+			
+			.back {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/back.png)no-repeat;
+				background-size: auto 1.6rem;
+			}
+			
+			.title {
+				height: 5rem;
+				width: calc( 100% - 6rem);
+				line-height: 5rem;
+				font-size: 1.8rem;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			
+			.changeBtn {
+				height: 2rem;
+				width: 2rem;
+				background: url(../../image/set.png)no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			#content {
+				width: 100%;
+				position: relative;
+				top: 6rem;
+			}
+			
+			#appLogo {
+				width: 100%;
+				text-align: center;
+			}
+			
+			#appLogo>img {
+				width: 8rem;
+				height: auto;
+			}
+			
+			#appLogo>p {
+				line-height: 3rem;
+				font-size: 2rem;
+				color: #404040;
+			}
+			
+			#contentInput {
+				width: 80%;
+				margin-left: 10%;
+			}
+			
+			#contentInput>.input {
+				width: 100%;
+				height: 4rem;
+				border-radius: 6px;
+				border: 1px solid #CCCCCC;
+				margin-bottom: 1rem;
+				position: relative;
+			}
+			
+			#contentInput>.input>input {
+				height: 100%;
+				width: 90%;
+				padding-right: 10%;
+				font-size: 1.5rem;
+			}
+			
+			#login {
+				height: 100%;
+				width: 100%;
+				background: #36D9D6;
+				color: #FFFFFF;
+				text-align: center;
+				font-size: 1.6rem;
+				line-height: 4rem;
+			}
+			
+			#userName {
+				background: url("../../image/zy_icon_user.png") 1rem center no-repeat;
+				background-size: 2rem auto;
+				text-indent: 4rem;
+			}
+			
+			#password {
+				background: url("../../image/zy_icon_mm.png") 1rem center no-repeat;
+				background-size: 2rem auto;
+				text-indent: 4rem;
+			}
+			
+			.look {
+				width: 10%;
+				height: 4rem;
+				position: absolute;
+				left: 88%;
+				top: 0;
+				background: url(../../image/yanj_b.png)center no-repeat;
+				background-size: auto 2rem;
+			}
+			
+			.btns {
+				float: left;
+				clear: both;
+				border: none !important;
+				color: #616161;
+			}
+			
+			.btns>div {
+				float: right;
+				line-height: 4rem;
+				font-size: 1.6rem;
+			}
+			
+			.line {
+				width: 2px;
+				height: 1.6rem;
+				background: #616161;
+				margin: 1.2rem;
+			}
+			
+			#code {
+				width: calc(100% - 9.5rem)!important;
+				padding-right: 0 !important;
+				text-indent: 4rem;
+			}
+			
+			.codeNum {
+				width: 8rem;
+				float: right;
+				height: 3rem;
+				line-height: 3rem;
+				border: 1px solid #CCCCCC;
+				text-align: center;
+				font-size: 2rem;
+				font-family: Arial;
+				font-style: italic;
+				letter-spacing: 0.2rem;
+				font-weight: bold;
+				position: absolute;
+				top: 0.5rem;
+				right: 1rem;
+			}

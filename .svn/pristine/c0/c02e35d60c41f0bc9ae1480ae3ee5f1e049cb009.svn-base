@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" href="../../css/my/my.css" />
+</head>
+
+<body>
+	<!--我的基本信息区域-->
+	<div id="infoArea">
+		<!--用户信息区域-->
+		<div id="userInfo">
+			<img src="../../image/userIcon.jpg" class="pageChange" page="0" id="icon" />
+			<div id="userName">用户昵称</div>
+			<div id="usertext">用户座右铭</div>
+		</div>
+		<!--用户操作记录区域-->
+		<ul id="userRecord">
+			<li class="pageChange" page="1"><img src="../../image/baoming.png" />报名</li>
+			<li class="pageChange" page="2"><span id="lineLi"><img src="../../image/shoucang_my.png" />收藏</span></li>
+			<li class="pageChange" page="3"><img src="../../image/guanzhu_my.png" />关注</li>
+		</ul>
+	</div>
+	<!--设置相关内容区域-->
+	<div id="serArea">
+		<!--我的简历-->
+		<div id="my_resume" class="pageChange" page="4">
+			<div id="resume">我的简历<span class="pointer"></span></div>
+		</div>
+		<!--其他操作-->
+		<ul id="otherDone">
+			<li class="pageChange" page="5">我的钱包<span class="pointer"></span></li>
+			<li class="pageChange" page="6">意见反馈<span class="pointer"></span></li>
+			<li class="pageChange" page="7">联系我们<span class="pointer"></span></li>
+			<li class="pageChange" page="8">设置<span class="pointer"></span></li>
+		</ul>
+	</div>
+	<!--底部导航区域-->
+	<ul class="footerArea">
+		<li pageTo="1"><img src="../../image/part-time1.png" />兼职</li>
+		<li pageTo="2"><img src="../../image/bible1.png" />宝典</li>
+		<li pageTo="3"><img src="../../image/msg1.png" />消息</li>
+		<li pageTo="4"><img src="../../image/my2.png" />我的</li>
+	</ul>
+	<script src="../../js/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/jquery.cookie.js"></script>
+	<script type="text/javascript">
+
+
+		// 获取用户信息
+		var userCookieArry = ($.cookie('userCookie') == "null") || ($.cookie('userCookie') == undefined) ? [] : JSON.parse($.cookie('userCookie'));
+			for (let i = 0; i < userCookieArry.length; i++) {
+			if (userCookieArry[i].currentLogin == true) {
+				$("#userName").html(userCookieArry[i].nickname);
+				$("#usertext").html(userCookieArry[i].signature);
+				$("#icon").attr("Src",userCookieArry[i].userIcon)
+			}
+
+		}
+
+
+
+		//点击跳转
+		$(".pageChange").click(function (e) {
+			var index = $(this).attr("page");
+			switch (index) {
+				case "0":
+					window.open("../my/editor.html", "_self");
+					break;
+				case "1":
+					window.open("../my/signUp.html", "_self");
+					break;
+				case "2":
+					window.open("../my/collect.html", "_self");
+					break;
+				case "3":
+					window.open("../my/focus.html", "_self");
+					break;
+				case "4":
+					window.open("../my/my_resume.html", "_self");
+					break;
+				case "5":
+					window.open("../my/wallet.html", "_self");
+					break;
+				case "6":
+					window.open("../my/opinion.html", "_self");
+					break;
+				case "7":
+					window.open("../my/consulting.html", "_self");
+					break;
+				case "8":
+					window.open("../my/set.html", "_self");
+					break;
+				default:
+					break;
+			}
+		})
+	</script>
+</body>
+
+</html>

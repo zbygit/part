@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/msg/friendInfo.css" />
+</head>
+
+<body>
+
+	<script src="../../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../js/public.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/layer/layer.js"></script>
+	<script src="../../js/jquery.cookie.js"></script>
+	<script src="../../js/msg/friendInfo.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

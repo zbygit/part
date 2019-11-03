@@ -1,0 +1,296 @@
+#warp {
+  width: 100%;
+  font-size: 1.4rem;
+}
+header {
+  height: 4rem;
+  background-color: #36d9d6;
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  line-height: 4rem;
+}
+header a img {
+  width: 3rem;
+}
+header span {
+  font-size: 2rem;
+  color: white;
+}
+header span img {
+  width: 2.2rem;
+  margin-right: 1.5rem;
+}
+#exhibition {
+  height: 23rem;
+}
+#exhibition img {
+  width: 100%;
+  height: 100%;
+}
+#salary {
+  height: 16.5rem;
+}
+#salary .top {
+  height: 4.6rem;
+  line-height: 4.6rem;
+  color: #666666;
+}
+#salary .top img {
+  width: 3rem;
+  margin-left: 1.5rem;
+}
+#salary .top .right {
+  font-size: 1.2rem;
+  float: right;
+  margin-right: 2rem;
+}
+#salary .top .cover {
+  color: #36d9d6;
+  font-size: 1.6rem;
+}
+#salary .center {
+  height: 5.7rem;
+}
+#salary .center p {
+  width: 25rem;
+  margin: 1rem 5.7rem;
+  font-size: 1.3rem;
+  color: #666666;
+}
+#salary .center p span {
+  display: inline-block;
+  width: 10rem;
+  text-align: left;
+}
+#salary img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+#salary .bottom {
+  margin-top: 1rem;
+}
+#salary .bottom .company-logo {
+  float: left;
+  margin-left: 5.2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background: url('../image/ali.jpg') no-repeat round;
+  background-size: cover;
+  margin-right: 1rem;
+}
+#salary .bottom .company {
+  font-size: 1.4rem;
+  color: #666666;
+}
+#salary .bottom .company span {
+  font-size: 1.2rem;
+}
+#salary .bottom .company .renz {
+  background-color: #ffdd00;
+  border-radius: 0.5rem;
+  display: inline-block;
+  width: 6rem;
+  height: 1.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  color: white;
+}
+#salary .bottom .company .tuan {
+  display: inline-block;
+  width: 9rem;
+  height: 1.5rem;
+  border: 0.1rem solid #666666;
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 1.5rem;
+  margin-left: 1rem;
+}
+#describe {
+  height: 4.2rem;
+  padding-top: 1rem;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+#describe p {
+  background-color: white;
+  color: #36d9d6;
+  height: 4.2rem;
+}
+#describe p span {
+  font-size: 1.6rem;
+}
+#describe img {
+  width: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+#message p {
+  color: #999999;
+  padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+}
+#message p span {
+  color: #666666;
+  font-size: 1.5rem;
+}
+#message .hint {
+  margin: 0.5rem 3rem;
+  color: #36d9d6;
+  border: 0.1rem solid #36d9d6;
+  border-radius: 0.5rem;
+}
+.relation {
+  height: 4.2rem;
+  padding-top: 1rem;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+.relation p {
+  background-color: white;
+  color: #36d9d6;
+  height: 4.2rem;
+}
+.relation p span {
+  font-size: 1.6rem;
+  line-height: 4.2rem;
+}
+.relation img {
+  width: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+.relation-to {
+  height: 4.2rem;
+  border-top: 0.1rem solid #f5f5f5;
+  padding-bottom: 2rem;
+  background-color: #f5f5f5;
+}
+.relation-to p {
+  background-color: white;
+  color: #999999;
+  padding-left: 5.5rem;
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+}
+.relation-to p span {
+  color: #36d9d6;
+  font-size: 1.6rem;
+}
+.interest {
+  height: 4.2rem;
+  background-color: #f5f5f5;
+  margin-top: 1rem;
+}
+.interest p {
+  background-color: white;
+  color: #36d9d6;
+  height: 4.2rem;
+  line-height: 4.2rem;
+}
+.interest p span {
+  font-size: 1.6rem;
+}
+.interest img {
+  width: 3rem;
+  margin-left: 1.5rem;
+  margin-right: 0.5rem;
+}
+.buddha {
+  height: 5.2rem;
+  margin-top: 1rem;
+}
+.buddha p {
+  margin-left: 1rem;
+}
+.buddha span {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  border-radius: 50%;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+.buddha span:nth-of-type(1) {
+  background: url('../image/pjx1.jpg') no-repeat round;
+  background-size: cover;
+}
+.buddha span:nth-of-type(2) {
+  background: url('../image/pjx2.jpg') no-repeat;
+  background-size: cover;
+}
+.buddha span:nth-of-type(3) {
+  background: url('../image/pjx3.jpg') no-repeat round;
+  background-size: cover;
+}
+.buddha span:nth-of-type(4) {
+  background: url('../image/pjx4.jpg') no-repeat round;
+  background-size: cover;
+}
+.buddha span:nth-of-type(5) {
+  background: url('../image/pjx5.jpg') no-repeat round;
+  background-size: cover;
+}
+.buddha span:nth-of-type(6) {
+  background: url('../image/pjx6.jpg') no-repeat;
+  background-size: cover;
+}
+.buddha span:nth-of-type(7) {
+  background-color: #cccccc;
+  text-align: center;
+  line-height: 4rem;
+}
+#share {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 100;
+}
+#share img {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#footer {
+  height: 7rem;
+  padding-top: 1rem;
+  background-color: #f5f5f5;
+}
+#footer p {
+  background-color: white;
+  text-align: center;
+}
+#footer p .max {
+  display: inline-block;
+  width: 70%;
+  height: 4.6rem;
+  background-color: #36d9d6;
+  margin-top: 1.4rem;
+  vertical-align: middle;
+  line-height: 4.6rem;
+  color: white;
+  font-size: 2rem;
+}
+#footer p .max img {
+  width: 2.5rem;
+  margin-right: 1rem;
+}
+#footer p .min {
+  display: inline-block;
+  width: 20%;
+  height: 4.6rem;
+  margin-top: 1.4rem;
+  background-color: #36d992;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+  line-height: 4.6rem;
+}
+#footer p .min img {
+  width: 4rem;
+}

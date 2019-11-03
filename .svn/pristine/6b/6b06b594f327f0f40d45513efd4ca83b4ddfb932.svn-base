@@ -1,0 +1,202 @@
+.parcel{
+    width: 100%;
+    position: fixed;
+}
+header{
+    width: 100%;
+    height: 4rem;
+    background-color: #36d9d6;
+    padding:1rem 0;
+    text-align:center;
+    line-height: 4rem;
+    .left{
+        float: left;
+        margin-left: 1rem;
+        img{
+            width: 1.5rem;
+        }
+    }
+    .unset{
+        margin:0 auto;
+        font-size: 2rem;
+        text-align: center;
+        color:white;
+    }
+}
+.classify{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: white;
+    span{
+        display: inline-block;
+        width: 31%;
+        line-height: 3rem;
+        font-size: 1.6rem;
+        border-right: 1px solid #E2E2E2;
+        text-align: center;
+        img{
+            vertical-align: bottom;
+            margin-left: 0.5rem;
+        }
+    }
+    span:last-of-type{
+        border:none;
+    }
+}
+// 分类遮罩层
+#shade{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin-top: 10rem;
+    background-color: rgba(0, 0, 0, .3);
+    .shade-classify{
+        width: 100%;
+        background-color: white;
+        .ul1{
+            display: none;
+            padding-bottom: 1.7rem;
+            justify-content:space-around;
+            flex-wrap:wrap;
+            li{
+                // float: left;
+                margin:1.7rem 0.5rem 0;
+                width: 20%;
+                font-size: 1.6rem;
+                text-align: center;
+                color:#999999;
+                border:1px solid #cccccc;
+                border-radius: 0.3rem;
+            }
+        }
+        .ul2{
+            
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+            display: none;
+            padding-bottom: 2rem;
+            justify-content:space-around;
+            li{
+                width: 20%;
+                margin:0;
+                border:1px solid #cccccc;
+                font-size: 1.6rem;
+                text-align: center;
+                color:#999999;
+                border-radius: 0.3rem;
+            }
+        }
+        .ul4{
+            
+            display: flex;
+            flex-wrap: wrap;
+            display: none;
+            padding-bottom: 2rem;
+            justify-content:space-around;
+            li{
+                width: 8.5rem;
+                margin:1rem 0 0;
+                border:1px solid #cccccc;
+                font-size: 1.6rem;
+                text-align: center;
+                color:#999999;
+                border-radius: 0.3rem;
+            }
+        }
+        .ul3{
+             padding-bottom: 1.7rem;
+             display: none;
+             justify-content:space-around;
+             flex-wrap:wrap;
+            li{
+                margin:1.7rem 2.5% 0 ;
+                width: 16%;
+                font-size: 1.6rem;
+                text-align: center;
+                color:#999999;
+                border:1px solid #cccccc;
+                border-radius: 0.3rem;
+            }
+        }
+    }
+}
+.over{
+    font-size: 3rem;
+    color:#999999;
+    margin-top:10rem;
+    text-align: center;
+    display: none;
+}
+// 工作类表
+#work-list{
+    padding-top: 10rem;
+    li{
+        height: 7rem;
+        margin:0 1.1rem 0 1.7rem;
+        display: flex;
+        align-items:center;
+        border-bottom: 2px solid #f5f5f5;
+        img{
+            width: 100%;
+            
+        }
+        .logo{
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            background-color: #ff4040;
+            color:white;
+            line-height: 4rem;
+            text-align: center;
+            float: left;
+            margin-right: 1rem;
+            overflow: hidden;
+        }
+        .bk1{
+            background-color:#ff9f40; 
+        }
+        .bk2{
+            background-color:#23c7e8;
+        }
+        .bk3{
+            background-color: #23C7E8;
+        }
+        .bk4{
+            background-color: #FF4040;
+        }
+        .bk5{
+            background-color: #FF408C;
+        }
+        .center{
+            float: left;
+            width: ceil(100%-50rem);
+            .color{
+                color:#36d9d6;
+            }
+        }
+        .right{
+            width: 10rem;
+            float: right;
+            text-align: right;
+            .small{
+                display: inline-block;
+                background-color: #ffdd00;
+                padding:0 1rem;
+                border-radius: 0.5rem;
+                color:white;
+
+            }
+            p{
+                width: 90%;
+                color:#666666;
+                text-align: right;
+                margin-top: 0.5rem;
+                img{
+                    width: 2.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/task.css">
+</head>
+<body>
+    <div id="warp">
+        <div class="fixed">
+            <header>
+                <span class="left"><img src="../../image/back.png" alt=""></span>
+                <span class="unset">门任务</span>
+                <span class="right">我的任务</span>
+            </header>
+            <div id="task-status">
+                <ul class="clearfix">
+                    <li><span>全部分类</span><img src="../../image/xiasanjiao.png" alt=""></li>
+                    <li><span>最新任务</span><img src="../../image/xiasanjiao.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <div id="mask">
+            <div id="particulars">
+                <ul class="ul1">
+                    <li class="cover">全部任务</li>
+                    <li>调查</li>
+                    <li>关注</li>
+                    <li>分享</li>
+                    <li>下载</li>
+                    <li>其他</li>
+                </ul>
+                <ul class="ul2">
+                    <li class="cover">高薪任务</li>
+                    <li>最新任务</li>
+                    <li>热门任务</li>
+                </ul>
+            </div>
+        </div>
+        <div id="work-list">
+            <ul>
+                <li>
+                    <div class="logo">
+                        其他
+                    </div>
+                    <div class="center">
+                        <p>【米星】转发海报</p>
+                        <p><span class="color">￥0.8</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>158</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk1">
+                        分享
+                    </div>
+                    <div class="center">
+                        <p>【微信】分享到朋友圈</p>
+                        <p><span class="color">￥0.8</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>982</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【百度钱包】新用户下载</p>
+                        <p><span class="color">￥2.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>92</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk2">
+                       关注
+                    </div>
+                    <div class="center">
+                        <p>【星星钱袋】学生注册不提现</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>100</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【萝卜招聘】简单下载一分钟</p>
+                        <p><span class="color">￥1.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>64</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【冰趣】下载注册</p>
+                        <p><span class="color">￥2.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>71</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【宝驾出行】注册下载实名认证</p>
+                        <p><span class="color">￥11.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>91次</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo">
+                        其他
+                    </div>
+                    <div class="center">
+                        <p>【浦发银行卡】简单注册申请</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>194</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【爱学贷】简单注册[官网]</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>177</span>次</p>
+                    </div>
+                </li>
+                
+                <!--  -->
+                <li>
+                    <div class="logo">
+                        其他
+                    </div>
+                    <div class="center">
+                        <p>【米星】转发海报</p>
+                        <p><span class="color">￥0.8</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>158</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk1">
+                        分享
+                    </div>
+                    <div class="center">
+                        <p>【微信】分享到朋友圈</p>
+                        <p><span class="color">￥0.8</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>982</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【百度钱包】新用户下载</p>
+                        <p><span class="color">￥2.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>92</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk2">
+                        关注
+                    </div>
+                    <div class="center">
+                        <p>【星星钱袋】学生注册不提现</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>100</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【萝卜招聘】简单下载一分钟</p>
+                        <p><span class="color">￥1.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>64</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【冰趣】下载注册</p>
+                        <p><span class="color">￥2.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>71</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【宝驾出行】注册下载实名认证</p>
+                        <p><span class="color">￥11.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>91次</span></p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo">
+                        其他
+                    </div>
+                    <div class="center">
+                        <p>【浦发银行卡】简单注册申请</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>194</span>次</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="logo bk4">
+                        下载
+                    </div>
+                    <div class="center">
+                        <p>【爱学贷】简单注册[官网]</p>
+                        <p><span class="color">￥10.0</span></p>
+                    </div>
+                    <div class="right">
+                        <p>剩余: <span>177</span>次</p>
+                    </div>
+                </li>
+                <p class="over">没有对应的任务</p>
+            </ul>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="../../js/public.js"></script>
+    <script>
+    window.onload = function(){
+        // 返回上一个页面
+        var back = document.querySelector('header>.left')
+        back.addEventListener('touchstart',function(){
+            window.history.back()
+        })
+        // 跳转到我的任务
+        var mytask = document.querySelector('header>.right')
+        mytask.addEventListener('touchstart',function(){
+            location.href = 'mytask.html'
+        })
+        // 点击时出现下拉菜单
+        var $mask = $('#mask')
+        var $task = $('#task-status>ul>li')
+        var $ul = $('#mask ul')
+        var now = 0
+        var index = 0
+        var $logo = $('#work-list .logo')
+        var $over = $('.over')
+        $task.on('touchstart',function(event){
+            $ul.css('display','none')
+            $mask.css('display','block')
+            $($ul[$(this).index()]).css('display','block')
+            event.stopPropagation();
+        })
+        $('body').on('touchstart',function(e){
+            e.stopPropagation();
+            $mask.css('display', 'none')
+        })
+        $('#mask .ul1>li').on('touchstart',function(){
+            $('#task-status>ul>li>span')[0].innerHTML = $(this).html()
+            $($('#mask .ul1>li')[now]).removeClass('cover')
+            $(this).addClass('cover')
+            now = $(this).index()
+            var a = true
+            for(var i =0;i<$logo.length;i++){
+            $($logo[i]).parent().css('display', 'flex')
+
+                if($(this).text() === $logo[i].innerText){
+                    a = false
+                }else{
+                    $($logo[i]).parent().css('display','none')
+                }
+            }
+            if(a){
+                $over.css('display','block')
+            }else{
+                $over.css('display', 'none')
+            }
+        })
+
+        $('#mask .ul1>li')[0].addEventListener('touchstart',function(){
+            $logo.parent().css('display', 'flex')
+            $over.css('display', 'none')
+        })
+        $('#mask .ul2>li').on('touchstart', function () {
+            $('#task-status>ul>li>span')[1].innerHTML = $(this).html()
+            $($('#mask .ul2>li')[index]).removeClass('cover')
+            $(this).addClass('cover')
+            index = $(this).index()
+        })
+        
+        $($('#mask .ul2>li')[0]).on('touchstart',function(){
+            var arr = []
+            var span = $('#work-list li:visible .color')
+            for(var i =0;i<span.length;i++){
+                arr[i] = +span[i].innerHTML.substring(1)                
+            }
+
+            arr.sort(function (a, b) {
+                return b-a
+            })
+            for(var r =0;r<arr.length;r++){
+               for(var g=r+1;g<arr.length;g++){
+                   if(arr[r] == arr[g]){
+                       arr.splice(g,1)
+                       g--
+                   }
+               } 
+            }
+            for(var j =0;j<arr.length;j++){
+                arr[j] = arr[j].toFixed(1)+''
+            }
+            var list = $('#work-list li:visible')
+            var newArr =[]
+            for(var y=0;y<list.length;y++){
+                for(var u=0;u<list.length;u++){
+                    if (span[u].innerHTML.substring(1) == arr[y]) {
+                        newArr.push(span[u].parentNode.parentNode.parentNode.innerHTML)
+                    }
+                }
+            }
+            for(var t = 0;t< newArr.length;t++){
+                list[t].innerHTML = newArr[t]
+                
+            }
+            $task = $('#task-status>ul>li')
+            $logo = $('#work-list .logo')
+        })
+        console.log($('.logo'))
+        // 点击时跳转到详情页面，并把信息保存到cookie
+        var $list = $('#work-list>ul>li>.center p:first-child')
+            console.log($list)
+
+        $list.on('touchstart',function(){
+            var name = $(this).parent().parent().children('.center').children(':first(p)').text()
+            var residue = $(this).parent().parent().children('.center').children(':first(p)').text()              
+            var money = $(this).parent().parent().children('.center').children(':last(p)').text()
+            var quantity = $(this).parent().parent().children('.right').children('p').children('span').text()
+            var obj = {
+                "message" :name,
+                "money" : money,
+                "residue" : residue,
+                "quantity" : quantity
+            }
+            obj = JSON.stringify(obj)
+            document.cookie = 'task='+obj +';expires =' +new Date(new Date+7); 
+            location.href = 'taskdetail.html'
+        })
+    }
+    </script>
+</body>
+</html>
